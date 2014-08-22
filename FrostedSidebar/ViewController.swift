@@ -47,6 +47,11 @@ class ViewController: UIViewController, FrostedSidebarDelegate {
 		//			frostedSidebara.isSingleSelect = true
 		
 		frostedSidebar.actionForIndex[0] = { self.frostedSidebar.dismissAnimated(true, completion: nil) }
+        frostedSidebar.actionForIndex[1] =
+        {
+            self.performSegueWithIdentifier("FirstSegue", sender: self)
+            self.frostedSidebar.dismissAnimated(true, completion: nil)
+        }
 	}
 	
 	@IBAction func onBurger() {
@@ -66,7 +71,7 @@ class ViewController: UIViewController, FrostedSidebarDelegate {
 
 	}
     func sidebar(sidebar: FrostedSidebar, didTapItemAtIndex index: Int){
-        
+        println("tap on item %d", index)
     }
     func sidebar(sidebar: FrostedSidebar, didEnable itemEnabled: Bool, itemAtIndex index: Int){
         
