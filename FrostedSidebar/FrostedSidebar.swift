@@ -81,7 +81,7 @@ public class FrostedSidebar: UIViewController {
             view.clipsToBounds = true
             view.imageView.image = image
             contentView.addSubview(view)
-            //itemViews += view
+            itemViews.append(view)
             if (borderColors != nil){
                 if selectedIndices.containsIndex(index){
                     let color = borderColors![index]
