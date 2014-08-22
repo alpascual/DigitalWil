@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import XCTest
+//import XCTest
 
-class CustomStuffTests: XCTestCase {
+/*class CustomStuffTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,4 +33,4 @@ class CustomStuffTests: XCTestCase {
         }
     }
     
-}
+}*/

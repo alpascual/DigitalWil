@@ -12,7 +12,6 @@
 		2008D6A01970223100B89D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2008D69F1970223100B89D6C /* Main.storyboard */; };
 		2008D6A61970231B00B89D6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2008D6A51970231B00B89D6C /* Images.xcassets */; };
 		2066AEA3196DC14A001EE855 /* FrostedSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2066AEA2196DC14A001EE855 /* FrostedSidebar.swift */; };
-		208E5E07196DBE6F005653B3 /* FrostedSidebarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208E5E06196DBE6F005653B3 /* FrostedSidebarTests.swift */; };
 		20B553BE19701F1F006165BF /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20B553AF19701F1F006165BF /* Background.jpg */; };
 		20B553BF19701F1F006165BF /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B553B019701F1F006165BF /* burger.png */; };
 		20B553C019701F1F006165BF /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B553B119701F1F006165BF /* burger@2x.png */; };
@@ -46,8 +45,6 @@
 		208E5DEE196DBE6F005653B3 /* FrostedSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostedSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208E5DF2196DBE6F005653B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = FrostedSidebar/Info.plist; sourceTree = "<group>"; };
 		208E5E00196DBE6F005653B3 /* FrostedSidebarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrostedSidebarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		208E5E05196DBE6F005653B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		208E5E06196DBE6F005653B3 /* FrostedSidebarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrostedSidebarTests.swift; sourceTree = "<group>"; };
 		20B553AF19701F1F006165BF /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = FrostedSidebar/Background.jpg; sourceTree = SOURCE_ROOT; };
 		20B553B019701F1F006165BF /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burger.png; path = FrostedSidebar/burger.png; sourceTree = SOURCE_ROOT; };
 		20B553B119701F1F006165BF /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burger@2x.png"; path = "FrostedSidebar/burger@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -85,7 +82,6 @@
 			children = (
 				2066AEA2196DC14A001EE855 /* FrostedSidebar.swift */,
 				208E5DF0196DBE6F005653B3 /* FrostedSidebar */,
-				208E5E03196DBE6F005653B3 /* FrostedSidebarTests */,
 				208E5DEF196DBE6F005653B3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +98,7 @@
 		208E5DF0196DBE6F005653B3 /* FrostedSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				208E5DF2196DBE6F005653B3 /* Info.plist */,
 				2008D69B197021D300B89D6C /* AppDelegate.swift */,
 				2008D69C197021D300B89D6C /* ViewController.swift */,
 				2008D69F1970223100B89D6C /* Main.storyboard */,
@@ -127,25 +124,6 @@
 				20B553BB19701F1F006165BF /* profile@2x.png */,
 				20B553BC19701F1F006165BF /* star.png */,
 				20B553BD19701F1F006165BF /* star@2x.png */,
-				208E5DF2196DBE6F005653B3 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		208E5E03196DBE6F005653B3 /* FrostedSidebarTests */ = {
-			isa = PBXGroup;
-			children = (
-				208E5E06196DBE6F005653B3 /* FrostedSidebarTests.swift */,
-				208E5E04196DBE6F005653B3 /* Supporting Files */,
-			);
-			name = FrostedSidebarTests;
-			path = CustomStuffTests;
-			sourceTree = "<group>";
-		};
-		208E5E04196DBE6F005653B3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				208E5E05196DBE6F005653B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -272,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				208E5E07196DBE6F005653B3 /* FrostedSidebarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +383,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CustomStuffTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FrostedSidebar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = FrostedSidebarTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -421,7 +398,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = CustomStuffTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FrostedSidebar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = FrostedSidebarTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
