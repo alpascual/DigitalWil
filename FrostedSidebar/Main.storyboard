@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="400" y="380"/>
         </scene>
-        <!--View Controller-->
+        <!--Help View Controller-->
         <scene sceneID="p3J-Yp-TC0">
             <objects>
-                <viewController id="hIR-aT-Z1I" sceneMemberID="viewController">
+                <viewController id="hIR-aT-Z1I" customClass="HelpViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fmB-1Z-ILU"/>
                         <viewControllerLayoutGuide type="bottom" id="XdG-Oc-s41"/>
@@ -55,6 +55,17 @@
                     <view key="view" contentMode="scaleToFill" id="RSp-MX-8I0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-nJ-f1V">
+                                <rect key="frame" x="46" y="28" width="19" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="onBurger" destination="yFd-Pw-cF0" eventType="touchUpInside" id="BNW-dg-KZJ"/>
+                                    <action selector="onBurger" destination="hIR-aT-Z1I" eventType="touchDown" id="eyA-fW-luy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
