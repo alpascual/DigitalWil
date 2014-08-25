@@ -38,11 +38,12 @@
                     </view>
                     <connections>
                         <segue destination="hIR-aT-Z1I" kind="show" identifier="FirstSegue" id="b1c-3n-AnG"/>
+                        <segue destination="Rmg-DR-U1i" kind="show" identifier="SecondSegue" id="24K-Bs-Gkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvg-aq-5CD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="380"/>
+            <point key="canvasLocation" x="357" y="417"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="p3J-Yp-TC0">
@@ -65,17 +66,67 @@
                                     <action selector="onBurger" destination="hIR-aT-Z1I" eventType="touchDown" id="eyA-fW-luy"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-lV-7jf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1670"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DMM-lV-7jf" firstAttribute="width" secondItem="RSp-MX-8I0" secondAttribute="width" id="oLC-d8-Jpa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Rmg-DR-U1i" kind="show" identifier="SecondSegue" id="m0O-ij-KYu"/>
+                        <segue destination="yFd-Pw-cF0" kind="show" identifier="ZeroSegue" id="h4v-sS-Jnz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnQ-o3-8lR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="380"/>
+            <point key="canvasLocation" x="1170" y="322"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="7SV-2h-ohb">
+            <objects>
+                <viewController id="Rmg-DR-U1i" customClass="ProfileViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P19-b5-Pvb"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLb-Tb-Tbf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vge-uR-xDG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-ve-MVt">
+                                <rect key="frame" x="48" y="37" width="19" height="22"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="burger"/>
+                                <connections>
+                                    <action selector="onBurger" destination="hIR-aT-Z1I" eventType="touchDown" id="JUV-8K-VKg"/>
+                                    <action selector="onBurger" destination="yFd-Pw-cF0" eventType="touchUpInside" id="YBW-uz-3Wq"/>
+                                    <action selector="onBurger" destination="Rmg-DR-U1i" eventType="touchDown" id="pUc-Yc-XJl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="hIR-aT-Z1I" kind="show" identifier="FirstSegue" id="LmO-ta-MDy"/>
+                        <segue destination="yFd-Pw-cF0" kind="show" identifier="ZeroSegue" id="wEa-OZ-SzU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sg9-ZV-96S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131" y="1260"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background.jpg" width="63" height="111"/>
         <image name="burger" width="19" height="17"/>
+        <image name="warning.png" width="640" height="1007"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="b1c-3n-AnG"/>
+        <segue reference="wEa-OZ-SzU"/>
+        <segue reference="24K-Bs-Gkt"/>
+    </inferredMetricsTieBreakers>
 </document>

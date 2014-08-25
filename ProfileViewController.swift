@@ -1,18 +1,18 @@
 //
-//  HelpViewController.swift
+//  ProfileViewController.swift
 //  FrostedSidebar
 //
-//  Created by Al Pascual on 8/22/14.
+//  Created by Al Pascual on 8/25/14.
 //  Copyright (c) 2014 Evan Dekhayser. All rights reserved.
 //
 
 import UIKit
 
-class HelpViewController: MasterPage {
+class ProfileViewController: MasterPage {
 
     override func viewDidLoad() {
         
-        viewControllerIndex = 1
+        viewControllerIndex = 2
         
         super.viewDidLoad()
         // Do view setup here.
