@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yFd-Pw-cF0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -27,16 +28,36 @@
                                     <action selector="onBurger" destination="yFd-Pw-cF0" eventType="touchUpInside" id="5Az-vg-sfe"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCZ-mM-h7v">
+                                <rect key="frame" x="0.0" y="437" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="R9p-Jw-abO"/>
+                                    <constraint firstAttribute="width" constant="600" id="oz7-No-ZBS"/>
+                                </constraints>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-Vs-QcB">
+                                <rect key="frame" x="16" y="372" width="275" height="29"/>
+                                <segments>
+                                    <segment title="Morning"/>
+                                    <segment title="Afternoon"/>
+                                    <segment title="Evening"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aXT-I8-4Vl" secondAttribute="bottom" id="2Y8-C2-k4e"/>
+                            <constraint firstAttribute="bottom" secondItem="hCZ-mM-h7v" secondAttribute="bottom" constant="1" id="GmC-Pg-f7O"/>
+                            <constraint firstItem="hCZ-mM-h7v" firstAttribute="trailing" secondItem="X4b-dZ-l1O" secondAttribute="trailingMargin" id="P2F-wU-nWq"/>
                             <constraint firstItem="aXT-I8-4Vl" firstAttribute="leading" secondItem="X4b-dZ-l1O" secondAttribute="leading" id="Pai-eO-zfB"/>
                             <constraint firstItem="aXT-I8-4Vl" firstAttribute="top" secondItem="X4b-dZ-l1O" secondAttribute="top" id="aG0-wg-dfN"/>
+                            <constraint firstItem="AhR-c2-Zoo" firstAttribute="top" secondItem="hCZ-mM-h7v" secondAttribute="bottom" constant="1" id="c5j-Py-HHb"/>
                             <constraint firstAttribute="trailing" secondItem="aXT-I8-4Vl" secondAttribute="trailing" id="mA0-o5-49Q"/>
+                            <constraint firstAttribute="centerX" secondItem="hCZ-mM-h7v" secondAttribute="centerX" id="sT4-75-2y9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outletCollection property="timePicker" destination="hCZ-mM-h7v" collectionClass="NSMutableArray" id="Q89-D2-swm"/>
                         <segue destination="hIR-aT-Z1I" kind="show" identifier="FirstSegue" id="b1c-3n-AnG"/>
                         <segue destination="Rmg-DR-U1i" kind="show" identifier="SecondSegue" id="24K-Bs-Gkt"/>
                     </connections>
@@ -57,8 +78,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-lV-7jf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-lV-7jf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1670"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1670" id="cFM-fv-gg1"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-nJ-f1V">
                                 <rect key="frame" x="20" y="20" width="19" height="22"/>
@@ -72,6 +96,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DMM-lV-7jf" firstAttribute="leading" secondItem="fmB-1Z-ILU" secondAttribute="leading" id="50R-n7-GeQ"/>
+                            <constraint firstItem="DMM-lV-7jf" firstAttribute="top" secondItem="RSp-MX-8I0" secondAttribute="top" id="byf-kd-ZgZ"/>
                             <constraint firstItem="DMM-lV-7jf" firstAttribute="width" secondItem="RSp-MX-8I0" secondAttribute="width" id="oLC-d8-Jpa"/>
                         </constraints>
                     </view>
@@ -96,8 +122,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="safe.png" translatesAutoresizingMaskIntoConstraints="NO" id="LbA-pE-cqb">
-                                <rect key="frame" x="0.0" y="0.0" width="595" height="1600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safe.png" translatesAutoresizingMaskIntoConstraints="NO" id="LbA-pE-cqb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1600" id="xuB-BZ-r0E"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-ve-MVt">
                                 <rect key="frame" x="20" y="20" width="19" height="22"/>
@@ -112,7 +141,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LbA-pE-cqb" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" id="Jka-Oy-Z85"/>
                             <constraint firstItem="LbA-pE-cqb" firstAttribute="width" secondItem="vge-uR-xDG" secondAttribute="width" id="MCe-Om-947"/>
+                            <constraint firstItem="LbA-pE-cqb" firstAttribute="leading" secondItem="cLb-Tb-Tbf" secondAttribute="leading" id="gzG-gX-OuI"/>
                         </constraints>
                     </view>
                     <connections>

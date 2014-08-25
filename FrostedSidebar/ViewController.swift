@@ -8,16 +8,38 @@
 
 import UIKit
 
-class ViewController: MasterPage {
+class ViewController: MasterPage,UIPickerViewDataSource, UIPickerViewDelegate {
     
 	
+    @IBOutlet var timePicker: [UIPickerView]!
+    let timeArray = ["Daily","Monthly","Every 3 Months", "Every 6 Months"]
+    
 	override func viewDidLoad() {
         
         viewControllerIndex = 0
         
 		super.viewDidLoad()
-
+        
+        self.timePicker![0].dataSource = self
+        self.timePicker![0].delegate = self
 	}
+        
+    // returns the number of 'columns' to display.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int
+    {
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int
+    {
+        return self.timeArray.count
+    }
+    
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String!
+    {
+        return self.timeArray[row]
+    }
     
 }
 
