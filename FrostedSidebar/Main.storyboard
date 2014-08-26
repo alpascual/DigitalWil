@@ -157,16 +157,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="saY-Yc-S9N">
                                 <rect key="frame" x="0.0" y="93" width="600" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="r1o-br-xdU"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="xcJ-m7-dde"/>
-                                </constraints>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="saY-Yc-S9N" secondAttribute="trailing" id="AJ0-v4-uIi"/>
                             <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" constant="93" id="LJN-Rr-xCv"/>
+                            <constraint firstItem="saY-Yc-S9N" firstAttribute="width" secondItem="vge-uR-xDG" secondAttribute="width" id="TJA-dl-YZc"/>
                             <constraint firstAttribute="bottom" secondItem="saY-Yc-S9N" secondAttribute="bottom" id="poM-wA-Nj5"/>
                         </constraints>
                     </view>

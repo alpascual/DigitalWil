@@ -12,7 +12,7 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
 
     @IBOutlet var tableView: UITableView!
     
-    let sectionStrings = ["Screen lock code","How often","Every 3 Months", "Every 6 Months"]
+    let sectionStrings = ["Screen lock code","# of tries before sending code", "Best time of the day", "How long between requests"]
     
     override func viewDidLoad() {
         
@@ -39,11 +39,16 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
     {
         //var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         var cell : UITableViewCell! = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
-        cell.selectionStyle = UITableViewCellSelectionStyle.Blue
+        cell.selectionStyle = UITableViewCellSelectionStyle.Default
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         // Configure the cell...
         cell!.textLabel.text = sectionStrings[indexPath.row] as String
+        cell!.textLabel.font = UIFont(name: "ItalicMT", size: 10.0)
+        cell!.textLabel.textColor = UIColor.grayColor()
+        
         cell!.detailTextLabel.text = "Empty"
+        cell!.detailTextLabel.font = UIFont(name: "ArialMT", size: 20.0)
         
         return cell
     }
