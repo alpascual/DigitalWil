@@ -11,6 +11,7 @@ import UIKit
 class ViewController: MasterPage,UIPickerViewDataSource, UIPickerViewDelegate {
     
 	
+    @IBOutlet var alertSlider: UISlider!
     @IBOutlet var timePicker: [UIPickerView]!
     let timeArray = ["Daily","Monthly","Every 3 Months", "Every 6 Months"]
     
@@ -21,9 +22,10 @@ class ViewController: MasterPage,UIPickerViewDataSource, UIPickerViewDelegate {
 		super.viewDidLoad()
         
         self.timePicker![0].dataSource = self
-        self.timePicker![0].delegate = self
-	}
+        self.timePicker![0].delegate = self        
         
+	}
+    
     // returns the number of 'columns' to display.
     func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int
     {

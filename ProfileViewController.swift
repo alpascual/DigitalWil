@@ -8,14 +8,37 @@
 
 import UIKit
 
-class ProfileViewController: MasterPage {
+class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var tableView: UITableView!
+    
+    let sectionStrings = ["Screen lock code","How often","Every 3 Months", "Every 6 Months"]
+    
     override func viewDidLoad() {
         
         viewControllerIndex = 2
         
         super.viewDidLoad()
-        // Do view setup here.
+        
+        self.tableView!.delegate = self
+        self.tableView!.dataSource = self
     }
     
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    {
+        return sectionStrings.count
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    {
+        self.tableView.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "reuseIdentifier")
+        
+        let cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        
+        // Configure the cell...
+        cell!.textLabel.text = sectionStrings[indexPath.row] as String
+        
+        return cell
+    }
 }
