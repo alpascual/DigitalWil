@@ -13,6 +13,8 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
     @IBOutlet var tableView: UITableView!
     
     let sectionStrings = ["Screen lock code","# of tries before sending code", "Best time of the day", "How long between requests"]
+    var valueStrings = []
+    let configuration = Configuration()
     
     override func viewDidLoad() {
         
@@ -26,7 +28,8 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         
-        
+        let config = Configuration()
+        self.valueStrings = config.getConfigurationArray()
     }
     
     
@@ -47,7 +50,7 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         cell!.textLabel.font = UIFont(name: "ItalicMT", size: 10.0)
         cell!.textLabel.textColor = UIColor.grayColor()
         
-        cell!.detailTextLabel.text = "Empty"
+        cell!.detailTextLabel.text = configuration.convertValueFor(self.valueStrings[indexPath.row], position: indexPath.row)
         cell!.detailTextLabel.font = UIFont(name: "ArialMT", size: 20.0)
         
         return cell

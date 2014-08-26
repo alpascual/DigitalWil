@@ -22,7 +22,10 @@ class ViewController: MasterPage,UIPickerViewDataSource, UIPickerViewDelegate {
 		super.viewDidLoad()
         
         self.timePicker![0].dataSource = self
-        self.timePicker![0].delegate = self        
+        self.timePicker![0].delegate = self
+        
+        // Init the configuration
+        let configuration = Configuration()
         
 	}
     
