@@ -15,6 +15,7 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
     let sectionStrings = ["Screen lock code","# of tries before sending code", "Best time of the day", "How long between requests"]
     var valueStrings = []
     let configuration = Configuration()
+    var configurationEdited = 0
     
     override func viewDidLoad() {
         
@@ -54,5 +55,16 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         cell!.detailTextLabel.font = UIFont(name: "ArialMT", size: 20.0)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
+    {
+        self.configurationEdited = indexPath.row
+        self.performSegueWithIdentifier("EditConfiguration", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        var editView =  segue.destinationViewController as EditConfigurationViewController
+        editView.ConfigurationNumber = self.configurationEdited
     }
 }

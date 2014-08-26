@@ -158,29 +158,72 @@
                                 <rect key="frame" x="0.0" y="93" width="600" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ax7-MY-bAx">
+                                <rect key="frame" x="85" y="28" width="142" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="YyI-8v-bi6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="saY-Yc-S9N" secondAttribute="trailing" id="AJ0-v4-uIi"/>
+                            <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="Ax7-MY-bAx" secondAttribute="bottom" constant="27" id="F5x-2k-bEk"/>
+                            <constraint firstItem="Ax7-MY-bAx" firstAttribute="top" secondItem="P19-b5-Pvb" secondAttribute="bottom" constant="8" symbolic="YES" id="JBC-8i-NjM"/>
                             <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" constant="93" id="LJN-Rr-xCv"/>
                             <constraint firstItem="saY-Yc-S9N" firstAttribute="width" secondItem="vge-uR-xDG" secondAttribute="width" id="TJA-dl-YZc"/>
                             <constraint firstAttribute="bottom" secondItem="saY-Yc-S9N" secondAttribute="bottom" id="poM-wA-Nj5"/>
+                            <constraint firstItem="Ax7-MY-bAx" firstAttribute="leading" secondItem="vge-uR-xDG" secondAttribute="leading" constant="85" id="zgy-Ge-kfn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="saY-Yc-S9N" id="i5v-V3-h2T"/>
                         <segue destination="hIR-aT-Z1I" kind="show" identifier="FirstSegue" id="LmO-ta-MDy"/>
                         <segue destination="yFd-Pw-cF0" kind="show" identifier="ZeroSegue" id="wEa-OZ-SzU"/>
+                        <segue destination="GYH-pV-Ny1" kind="show" identifier="EditConfiguration" id="Xat-DA-zus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg9-ZV-96S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1131" y="1260"/>
         </scene>
+        <!--Edit Configuration View Controller-->
+        <scene sceneID="InJ-JN-QkT">
+            <objects>
+                <viewController id="GYH-pV-Ny1" customClass="EditConfigurationViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNE-Hb-QQB"/>
+                        <viewControllerLayoutGuide type="bottom" id="vsS-p0-5Uj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2wa-6c-Cml">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safe.png" translatesAutoresizingMaskIntoConstraints="NO" id="3mm-sc-Ztm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1693"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3mm-sc-Ztm" firstAttribute="top" secondItem="dNE-Hb-QQB" secondAttribute="bottom" constant="-20" id="24V-Br-Ay2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3mm-sc-Ztm" secondAttribute="trailing" constant="-16" id="3h2-qz-mfb"/>
+                            <constraint firstAttribute="width" secondItem="3mm-sc-Ztm" secondAttribute="width" id="O6v-62-bkf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3mm-sc-Ztm" secondAttribute="bottom" constant="-1093" id="YLk-Lt-3wg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qy3-44-KaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="1260"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background.jpg" width="63" height="111"/>
         <image name="burger" width="19" height="17"/>
+        <image name="safe.png" width="640" height="1007"/>
         <image name="warning.png" width="640" height="1007"/>
     </resources>
     <inferredMetricsTieBreakers>
