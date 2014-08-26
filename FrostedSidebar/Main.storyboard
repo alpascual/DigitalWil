@@ -144,12 +144,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safe.png" translatesAutoresizingMaskIntoConstraints="NO" id="LbA-pE-cqb">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="1600"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1600" id="xuB-BZ-r0E"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-ve-MVt">
                                 <rect key="frame" x="20" y="20" width="19" height="22"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,16 +154,20 @@
                                     <action selector="onBurger" destination="Rmg-DR-U1i" eventType="touchDown" id="pUc-Yc-XJl"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="saY-Yc-S9N">
-                                <rect key="frame" x="9" y="0.0" width="591" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="saY-Yc-S9N">
+                                <rect key="frame" x="0.0" y="93" width="600" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="r1o-br-xdU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="xcJ-m7-dde"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LbA-pE-cqb" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" id="Jka-Oy-Z85"/>
-                            <constraint firstItem="LbA-pE-cqb" firstAttribute="width" secondItem="vge-uR-xDG" secondAttribute="width" id="MCe-Om-947"/>
-                            <constraint firstItem="LbA-pE-cqb" firstAttribute="leading" secondItem="cLb-Tb-Tbf" secondAttribute="leading" id="gzG-gX-OuI"/>
+                            <constraint firstAttribute="trailing" secondItem="saY-Yc-S9N" secondAttribute="trailing" id="AJ0-v4-uIi"/>
+                            <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" constant="93" id="LJN-Rr-xCv"/>
+                            <constraint firstAttribute="bottom" secondItem="saY-Yc-S9N" secondAttribute="bottom" id="poM-wA-Nj5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -186,7 +184,6 @@
     <resources>
         <image name="Background.jpg" width="63" height="111"/>
         <image name="burger" width="19" height="17"/>
-        <image name="safe.png" width="640" height="1007"/>
         <image name="warning.png" width="640" height="1007"/>
     </resources>
     <inferredMetricsTieBreakers>

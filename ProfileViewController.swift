@@ -20,8 +20,13 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         
         super.viewDidLoad()
         
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        self.tableView!.rowHeight = 80
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
+        
+        
     }
     
     
@@ -32,12 +37,13 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
-        self.tableView.registerClass(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "reuseIdentifier")
-        
-        let cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        //var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
+        var cell : UITableViewCell! = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
+        cell.selectionStyle = UITableViewCellSelectionStyle.Blue
         
         // Configure the cell...
         cell!.textLabel.text = sectionStrings[indexPath.row] as String
+        cell!.detailTextLabel.text = "Empty"
         
         return cell
     }
