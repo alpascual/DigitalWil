@@ -18,6 +18,8 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
     @IBOutlet var textValue: UITextField!
     @IBOutlet var selectPicker: UIPickerView!
     
+    var selectedRow = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,66 +55,84 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         if self.ConfigurationNumber == 0 {
             textValue.text = valuesArray[self.ConfigurationNumber] as String
             textValue.secureTextEntry = true
+            self.selectPicker.hidden = true
         }
         else if self.ConfigurationNumber == 1 {
             
             textValue.text =  String(valuesArray[self.ConfigurationNumber] as Int)
+            self.selectPicker.hidden = true
             
         }
         else if self.ConfigurationNumber == 2 {
             textValue.hidden = true
-            var timeOfDay = valuesArray[self.ConfigurationNumber] as Int
-            textValue.tag = timeOfDay
-            switch(timeOfDay)
-                {
-            case 1:
-                textValue.text = timeOfDayString[0] as String
-                break
-            case 2:
-                textValue.text = timeOfDayString[1] as String
-                break
-            default:
-                textValue.text = timeOfDayString[2] as String
-                break
-            }
+//            var timeOfDay = valuesArray[self.ConfigurationNumber] as Int
+//            textValue.tag = timeOfDay
+//            switch(timeOfDay)
+//                {
+//            case 1:
+//                textValue.text = timeOfDayString[0] as String
+//                break
+//            case 2:
+//                textValue.text = timeOfDayString[1] as String
+//                break
+//            default:
+//                textValue.text = timeOfDayString[2] as String
+//                break
+//            }
         }
         else if self.ConfigurationNumber == 3
         {
             textValue.hidden = true
-            var howOften = valuesArray[self.ConfigurationNumber] as Int
-            textValue.tag = howOften
-            switch(howOften)
-                {
-            case 1:
-                textValue.text = howOftenString[0] as String
-                break
-            case 7:
-                textValue.text = howOftenString[1] as String
-                break
-            case 30:
-                textValue.text = howOftenString[2] as String
-                break
-            case 60:
-                textValue.text = howOftenString[3] as String
-                break
-            case 90:
-                textValue.text = howOftenString[4] as String
-                break
-            case 180:
-                textValue.text = howOftenString[5] as String
-                break
-            default:
-                textValue.text = howOftenString[6] as String
-                break
-                
-            }
+//            var howOften = valuesArray[self.ConfigurationNumber] as Int
+//            textValue.tag = howOften
+//            switch(howOften)
+//                {
+//            case 1:
+//                textValue.text = howOftenString[0] as String
+//                break
+//            case 7:
+//                textValue.text = howOftenString[1] as String
+//                break
+//            case 30:
+//                textValue.text = howOftenString[2] as String
+//                break
+//            case 60:
+//                textValue.text = howOftenString[3] as String
+//                break
+//            case 90:
+//                textValue.text = howOftenString[4] as String
+//                break
+//            case 180:
+//                textValue.text = howOftenString[5] as String
+//                break
+//            default:
+//                textValue.text = howOftenString[6] as String
+//                break
+//                
+//            }
         }
         
     }
     
     @IBAction func pressedSave()
     {
-        
+        let config = Configuration()
+        if self.ConfigurationNumber == 0 {
+            config.setCode(textValue.text)
+        }
+        else if self.ConfigurationNumber == 1 {
+            config.setNumberOfTries(textValue.text.toInt()!)
+        }
+        else if self.ConfigurationNumber == 2 {
+            if ( self.selectedRow > -1) {
+                config.setBestTimeOfDay(self.selectedRow)
+            }
+        }
+        else if self.ConfigurationNumber == 3 {
+            if ( self.selectedRow > -1) {
+                config.setHowLongBetweenRequests(self.selectedRow)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -151,7 +171,7 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         {
             var howOftenString = config.getHowOften()
             return howOftenString.count
-        }       
+        }
         return 0
     }
     
@@ -169,6 +189,11 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
             return howOftenString[row] as String
         }
         return ""
+    }
+    
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    {
+        self.selectedRow = row
     }
 
 }

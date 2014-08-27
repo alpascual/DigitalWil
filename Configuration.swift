@@ -33,6 +33,31 @@ class Configuration
         defaults.synchronize()
     }
     
+    func setCode(valueString: String)
+    {
+        var defaults = NSUserDefaults()
+        defaults.setObject(valueString, forKey: Code)
+        defaults.synchronize()
+    }
+    func setNumberOfTries(value: Int)
+    {
+        var defaults = NSUserDefaults()
+        defaults.setInteger(value, forKey: NumberOfTries)
+        defaults.synchronize()
+    }
+    func setBestTimeOfDay(value: Int)
+    {
+        var defaults = NSUserDefaults()
+        defaults.setInteger(value, forKey: BestTimeOfDay)
+        defaults.synchronize()
+    }
+    func setHowLongBetweenRequests(value: Int)
+    {
+        var defaults = NSUserDefaults()
+        defaults.setInteger(value, forKey: HowLongBetweenRequests)
+        defaults.synchronize()
+    }
+    
     func getConfigurationArray() -> NSArray
     {
         var configuration : NSMutableArray = []
