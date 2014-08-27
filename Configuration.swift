@@ -48,8 +48,20 @@ class Configuration
         return configuration
     }
     
+    func getTimeOfTheDay() -> NSArray
+    {
+        return ["Morning","Afternoon", "Evening"]
+    }
+    
+    func getHowOften() -> NSArray
+    {
+        return ["Every Day","Weekly", "Monthly", "Every 2 months", "Every 3 months", "Every 6 months", "Never"]
+    }
+    
     func convertValueFor(obj : AnyObject!, position: Int) -> String
     {
+        var timeOfDay = self.getTimeOfTheDay()
+        var howOften = self.getHowOften()
         switch(position)
         {
         case 0:
@@ -60,29 +72,29 @@ class Configuration
             switch(obj as Int)
             {
             case 1:
-                return "Morning"
+                return timeOfDay[0] as String
             case 2:
-                return "Afternoon"
+                return timeOfDay[1] as String
             default:
-                return "Evening"
+                return timeOfDay[2] as String
             }
         case 3:
             switch(obj as Int)
             {
             case 1:
-                return "Every Day"
+                return howOften[0] as String
             case 7:
-                return "Weekly"
+                return howOften[1] as String
             case 30:
-                return "Montly"
+                return howOften[2] as String
             case 60:
-                return "Every 2 months"
+                return howOften[3] as String
             case 90:
-                return "Every 3 months"
+                return howOften[4] as String
             case 180:
-                return "Every 6 months"
+                return howOften[5] as String
             default:
-                return "Never"
+                return howOften[6] as String
             }
         default:
             return ""

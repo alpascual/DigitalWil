@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditConfigurationViewController: UIViewController {
+class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
 
     
     var ConfigurationNumber : Int = 0
@@ -16,7 +16,7 @@ class EditConfigurationViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var textValue: UITextField!
-    
+    @IBOutlet var selectPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,34 +44,74 @@ class EditConfigurationViewController: UIViewController {
         
         let config = Configuration()
         var valuesArray = config.getConfigurationArray()
+        var timeOfDayString = config.getTimeOfTheDay()
+        var howOftenString = config.getHowOften()
+        
+        self.selectPicker!.dataSource = self
+        self.selectPicker!.delegate = self
         
         if self.ConfigurationNumber == 0 {
             textValue.text = valuesArray[self.ConfigurationNumber] as String
             textValue.secureTextEntry = true
         }
         else if self.ConfigurationNumber == 1 {
+            
             textValue.text =  String(valuesArray[self.ConfigurationNumber] as Int)
+            
         }
         else if self.ConfigurationNumber == 2 {
+            textValue.hidden = true
             var timeOfDay = valuesArray[self.ConfigurationNumber] as Int
             textValue.tag = timeOfDay
             switch(timeOfDay)
                 {
             case 1:
-                textValue.text = "Morning"
+                textValue.text = timeOfDayString[0] as String
                 break
             case 2:
-                textValue.text = "Afternoon"
+                textValue.text = timeOfDayString[1] as String
                 break
             default:
-                textValue.text = "Evening"
+                textValue.text = timeOfDayString[2] as String
                 break
             }
         }
         else if self.ConfigurationNumber == 3
         {
-            
+            textValue.hidden = true
+            var howOften = valuesArray[self.ConfigurationNumber] as Int
+            textValue.tag = howOften
+            switch(howOften)
+                {
+            case 1:
+                textValue.text = howOftenString[0] as String
+                break
+            case 7:
+                textValue.text = howOftenString[1] as String
+                break
+            case 30:
+                textValue.text = howOftenString[2] as String
+                break
+            case 60:
+                textValue.text = howOftenString[3] as String
+                break
+            case 90:
+                textValue.text = howOftenString[4] as String
+                break
+            case 180:
+                textValue.text = howOftenString[5] as String
+                break
+            default:
+                textValue.text = howOftenString[6] as String
+                break
+                
+            }
         }
+        
+    }
+    
+    @IBAction func pressedSave()
+    {
         
     }
 
@@ -90,5 +130,45 @@ class EditConfigurationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // returns the number of 'columns' to display.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int
+    {
+        return 1
+    }
+    
+    // returns the # of rows in each component..
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int
+    {
+        let config = Configuration()
+        if self.ConfigurationNumber == 2
+        {
+            var timeOfDayString = config.getTimeOfTheDay()
+            return timeOfDayString.count
+        }
+        else if self.ConfigurationNumber == 3
+        {
+            var howOftenString = config.getHowOften()
+            return howOftenString.count
+        }       
+        return 0
+    }
+    
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String!
+    {
+        let config = Configuration()
+        if self.ConfigurationNumber == 2
+        {
+            var timeOfDayString = config.getTimeOfTheDay()
+            return timeOfDayString[row] as String
+        }
+        else if self.ConfigurationNumber == 3
+        {
+            var howOftenString = config.getHowOften()
+            return howOftenString[row] as String
+        }
+        return ""
+    }
 
 }
