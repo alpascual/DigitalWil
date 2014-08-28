@@ -65,6 +65,9 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         }
         else if self.ConfigurationNumber == 2 {
             textValue.hidden = true
+            
+            self.selectPicker.select(config.getTimeOfTheDayValue())
+            
 //            var timeOfDay = valuesArray[self.ConfigurationNumber] as Int
 //            textValue.tag = timeOfDay
 //            switch(timeOfDay)
@@ -83,6 +86,7 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         else if self.ConfigurationNumber == 3
         {
             textValue.hidden = true
+            self.selectPicker.select(config.getHowOftenValue())
 //            var howOften = valuesArray[self.ConfigurationNumber] as Int
 //            textValue.tag = howOften
 //            switch(howOften)
@@ -193,7 +197,34 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
     
     func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
     {
-        self.selectedRow = row
+        if self.ConfigurationNumber == 2 {
+            self.selectedRow = row + 1
+        }
+        else if self.ConfigurationNumber == 3
+        {
+            switch(row)
+                {
+            case 0:
+                self.selectedRow = 1
+                break
+            case 1:
+                self.selectedRow = 7
+                break
+            case 2:
+                self.selectedRow = 30
+                break
+            case 3:
+                self.selectedRow = 60
+                break
+            case 4:
+                self.selectedRow = 90
+                break
+            default:
+                self.selectedRow = 180
+                break
+            }
+            
+        }
     }
 
 }

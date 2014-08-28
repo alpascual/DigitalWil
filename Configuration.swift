@@ -83,6 +83,30 @@ class Configuration
         return ["Every Day","Weekly", "Monthly", "Every 2 months", "Every 3 months", "Every 6 months", "Never"]
     }
     
+    func getCodeValue() -> String
+    {
+        var defaults = NSUserDefaults()
+        return defaults.objectForKey(Code) as String
+    }
+    
+    func getNumberOfTriesValue() ->Int
+    {
+        var defaults = NSUserDefaults()
+        return defaults.objectForKey(NumberOfTries) as Int
+    }
+    
+    func getTimeOfTheDayValue() -> String
+    {
+        var defaults = NSUserDefaults()
+        return self.convertValueFor(defaults.objectForKey(BestTimeOfDay) as Int, position: 2)
+    }
+    
+    func getHowOftenValue() -> String
+    {
+        var defaults = NSUserDefaults()
+        return self.convertValueFor(defaults.objectForKey(HowLongBetweenRequests) as Int, position: 3)
+    }
+    
     func convertValueFor(obj : AnyObject!, position: Int) -> String
     {
         var timeOfDay = self.getTimeOfTheDay()
