@@ -109,6 +109,8 @@ class Configuration
     
     func convertValueFor(obj : AnyObject!, position: Int) -> String
     {
+        println(obj)
+        
         var timeOfDay = self.getTimeOfTheDay()
         var howOften = self.getHowOften()
         switch(position)

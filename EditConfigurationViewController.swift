@@ -64,59 +64,16 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
             
         }
         else if self.ConfigurationNumber == 2 {
-            textValue.hidden = true
-            
-            self.selectPicker.select(config.getTimeOfTheDayValue())
-            
-//            var timeOfDay = valuesArray[self.ConfigurationNumber] as Int
-//            textValue.tag = timeOfDay
-//            switch(timeOfDay)
-//                {
-//            case 1:
-//                textValue.text = timeOfDayString[0] as String
-//                break
-//            case 2:
-//                textValue.text = timeOfDayString[1] as String
-//                break
-//            default:
-//                textValue.text = timeOfDayString[2] as String
-//                break
-//            }
+            textValue.hidden = true            
+          
         }
         else if self.ConfigurationNumber == 3
         {
             textValue.hidden = true
-            self.selectPicker.select(config.getHowOftenValue())
-//            var howOften = valuesArray[self.ConfigurationNumber] as Int
-//            textValue.tag = howOften
-//            switch(howOften)
-//                {
-//            case 1:
-//                textValue.text = howOftenString[0] as String
-//                break
-//            case 7:
-//                textValue.text = howOftenString[1] as String
-//                break
-//            case 30:
-//                textValue.text = howOftenString[2] as String
-//                break
-//            case 60:
-//                textValue.text = howOftenString[3] as String
-//                break
-//            case 90:
-//                textValue.text = howOftenString[4] as String
-//                break
-//            case 180:
-//                textValue.text = howOftenString[5] as String
-//                break
-//            default:
-//                textValue.text = howOftenString[6] as String
-//                break
-//                
-//            }
-        }
+          }
         
     }
+    
     
     @IBAction func pressedSave()
     {
@@ -145,15 +102,6 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     // returns the number of 'columns' to display.
@@ -185,11 +133,17 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         if self.ConfigurationNumber == 2
         {
             var timeOfDayString = config.getTimeOfTheDay()
+            if ( config.getTimeOfTheDayValue() == timeOfDayString[row] as String) {
+                pickerView!.selectRow(row, inComponent: component, animated: false)
+            }
             return timeOfDayString[row] as String
         }
         else if self.ConfigurationNumber == 3
         {
             var howOftenString = config.getHowOften()
+            if ( config.getHowOftenValue() == howOftenString[row] as String) {
+                pickerView!.selectRow(row, inComponent: component, animated: false)
+            }
             return howOftenString[row] as String
         }
         return ""
