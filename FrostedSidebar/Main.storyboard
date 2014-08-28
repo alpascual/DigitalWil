@@ -28,58 +28,45 @@
                                     <action selector="onBurger" destination="yFd-Pw-cF0" eventType="touchUpInside" id="5Az-vg-sfe"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCZ-mM-h7v">
-                                <rect key="frame" x="0.0" y="437" width="600" height="162"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="li7-jt-FL4">
+                                <rect key="frame" x="177" y="473" width="246" height="30"/>
+                                <state key="normal" title="Set up the alerts and password">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8X-lf-jKt">
+                                <rect key="frame" x="180" y="110" width="240" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="R9p-Jw-abO"/>
-                                    <constraint firstAttribute="width" constant="600" id="oz7-No-ZBS"/>
+                                    <constraint firstAttribute="height" constant="160" id="V6U-v0-Vuf"/>
+                                    <constraint firstAttribute="width" constant="240" id="jcO-uN-w7E"/>
                                 </constraints>
-                            </pickerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QFP-Vs-QcB">
-                                <rect key="frame" x="16" y="372" width="275" height="29"/>
-                                <segments>
-                                    <segment title="Morning"/>
-                                    <segment title="Afternoon"/>
-                                    <segment title="Evening"/>
-                                </segments>
-                            </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2b-ef-ZaB">
-                                <rect key="frame" x="16" y="207" width="186" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHm-O5-15C">
-                                <rect key="frame" x="16" y="178" width="176" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let you family access your iPhone when you are gone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-Yg-Hct">
+                                <rect key="frame" x="161" y="42" width="279" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="279" id="jZZ-Kf-R2B"/>
+                                    <constraint firstAttribute="height" constant="51" id="s9f-Zd-7v5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The password/code will be sent after trying to reach the amount of time" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je5-JE-R5N">
-                                <rect key="frame" x="16" y="245" width="226" height="76"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="HyT-oy-wre">
-                                <rect key="frame" x="14" y="329" width="279" height="31"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aXT-I8-4Vl" secondAttribute="bottom" id="2Y8-C2-k4e"/>
-                            <constraint firstAttribute="bottom" secondItem="hCZ-mM-h7v" secondAttribute="bottom" constant="1" id="GmC-Pg-f7O"/>
-                            <constraint firstItem="hCZ-mM-h7v" firstAttribute="trailing" secondItem="X4b-dZ-l1O" secondAttribute="trailingMargin" id="P2F-wU-nWq"/>
+                            <constraint firstItem="C8X-lf-jKt" firstAttribute="top" secondItem="28J-8P-oJS" secondAttribute="bottom" constant="90" id="58X-6r-Lq4"/>
+                            <constraint firstAttribute="centerX" secondItem="C8X-lf-jKt" secondAttribute="centerX" id="LJF-1A-YLM"/>
+                            <constraint firstItem="cKb-Yg-Hct" firstAttribute="top" secondItem="28J-8P-oJS" secondAttribute="bottom" constant="22" id="MuX-Y4-fwn"/>
+                            <constraint firstItem="AhR-c2-Zoo" firstAttribute="top" secondItem="li7-jt-FL4" secondAttribute="bottom" constant="97" id="PEm-2o-Thu"/>
                             <constraint firstItem="aXT-I8-4Vl" firstAttribute="leading" secondItem="X4b-dZ-l1O" secondAttribute="leading" id="Pai-eO-zfB"/>
                             <constraint firstItem="aXT-I8-4Vl" firstAttribute="top" secondItem="X4b-dZ-l1O" secondAttribute="top" id="aG0-wg-dfN"/>
-                            <constraint firstItem="AhR-c2-Zoo" firstAttribute="top" secondItem="hCZ-mM-h7v" secondAttribute="bottom" constant="1" id="c5j-Py-HHb"/>
                             <constraint firstAttribute="trailing" secondItem="aXT-I8-4Vl" secondAttribute="trailing" id="mA0-o5-49Q"/>
-                            <constraint firstAttribute="centerX" secondItem="hCZ-mM-h7v" secondAttribute="centerX" id="sT4-75-2y9"/>
+                            <constraint firstAttribute="centerX" secondItem="cKb-Yg-Hct" secondAttribute="centerX" constant="-0.5" id="ntC-oJ-0jb"/>
+                            <constraint firstAttribute="centerX" secondItem="li7-jt-FL4" secondAttribute="centerX" id="oPJ-US-yKe"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alertSlider" destination="HyT-oy-wre" id="SpT-We-g6h"/>
-                        <outletCollection property="timePicker" destination="hCZ-mM-h7v" collectionClass="NSMutableArray" id="Q89-D2-swm"/>
                         <segue destination="hIR-aT-Z1I" kind="show" identifier="FirstSegue" id="b1c-3n-AnG"/>
                         <segue destination="Rmg-DR-U1i" kind="show" identifier="SecondSegue" id="24K-Bs-Gkt"/>
                     </connections>
@@ -155,9 +142,15 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="saY-Yc-S9N">
-                                <rect key="frame" x="0.0" y="93" width="600" height="507"/>
+                                <rect key="frame" x="0.0" y="119" width="600" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="safe.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jy6-Rh-qIF">
+                                <rect key="frame" x="0.0" y="75" width="600" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="9WK-pg-5Bg"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ax7-MY-bAx">
                                 <rect key="frame" x="85" y="28" width="142" height="38"/>
                                 <constraints>
@@ -171,9 +164,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="saY-Yc-S9N" secondAttribute="trailing" id="AJ0-v4-uIi"/>
-                            <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="Ax7-MY-bAx" secondAttribute="bottom" constant="27" id="F5x-2k-bEk"/>
+                            <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="Ax7-MY-bAx" secondAttribute="bottom" constant="53" id="F5x-2k-bEk"/>
                             <constraint firstItem="Ax7-MY-bAx" firstAttribute="top" secondItem="P19-b5-Pvb" secondAttribute="bottom" constant="8" symbolic="YES" id="JBC-8i-NjM"/>
-                            <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" constant="93" id="LJN-Rr-xCv"/>
+                            <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="vge-uR-xDG" secondAttribute="top" constant="119" id="LJN-Rr-xCv"/>
                             <constraint firstItem="saY-Yc-S9N" firstAttribute="width" secondItem="vge-uR-xDG" secondAttribute="width" id="TJA-dl-YZc"/>
                             <constraint firstAttribute="bottom" secondItem="saY-Yc-S9N" secondAttribute="bottom" id="poM-wA-Nj5"/>
                             <constraint firstItem="Ax7-MY-bAx" firstAttribute="leading" secondItem="vge-uR-xDG" secondAttribute="leading" constant="85" id="zgy-Ge-kfn"/>
@@ -282,8 +275,8 @@
         <image name="warning.png" width="640" height="1007"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LmO-ta-MDy"/>
-        <segue reference="m0O-ij-KYu"/>
+        <segue reference="b1c-3n-AnG"/>
         <segue reference="wEa-OZ-SzU"/>
+        <segue reference="24K-Bs-Gkt"/>
     </inferredMetricsTieBreakers>
 </document>

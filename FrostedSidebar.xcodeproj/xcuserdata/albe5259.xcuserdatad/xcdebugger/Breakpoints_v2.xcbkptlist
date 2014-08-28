@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EditConfigurationViewController.swift"
-            timestampString = "430949539.121325"
+            timestampString = "430950974.246845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "pressedSave()"
             landmarkType = "5">
          </BreakpointContent>
