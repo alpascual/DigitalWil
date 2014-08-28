@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="357" y="417"/>
         </scene>
-        <!--Help View Controller-->
+        <!--Legacy View Controller-->
         <scene sceneID="p3J-Yp-TC0">
             <objects>
-                <viewController id="hIR-aT-Z1I" customClass="HelpViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hIR-aT-Z1I" customClass="LegacyViewController" customModule="FrostedSidebar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fmB-1Z-ILU"/>
                         <viewControllerLayoutGuide type="bottom" id="XdG-Oc-s41"/>
@@ -276,7 +276,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="b1c-3n-AnG"/>
-        <segue reference="wEa-OZ-SzU"/>
-        <segue reference="24K-Bs-Gkt"/>
+        <segue reference="h4v-sS-Jnz"/>
+        <segue reference="m0O-ij-KYu"/>
     </inferredMetricsTieBreakers>
 </document>

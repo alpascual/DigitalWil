@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import LocalAuthentication
 
 class ViewController: MasterPage {
     
     
-    let touchIDContext = LAContext()
+    
     
 	override func viewDidLoad() {
         
@@ -20,28 +19,7 @@ class ViewController: MasterPage {
         
 		super.viewDidLoad()
         
-        var authError: NSError? = nil
         
-        // Request touchID first 
-        if touchIDContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &authError)
-        {
-            touchIDContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "Confirm your identity to protect the data of this app", reply: { (success, error) -> Void in
-                if ( success) {
-                    // Got in
-                    println("you are in")
-                }
-                else
-                {
-                    // Don't let them in!
-                    println("you are out")
-                }
-            })
-        }
-        else
-        {
-            // Message: Your device does not have a Touch ID, we can secure this app better by Touch ID
-            println("Another kind of authentication")
-        }
         
 	}
     
