@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-lV-7jf">
+                            <imageView userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning.png" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-lV-7jf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1670"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1670" id="cFM-fv-gg1"/>
@@ -102,11 +102,48 @@
                                     <action selector="onBurger" destination="hIR-aT-Z1I" eventType="touchDown" id="eyA-fW-luy"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdO-MT-bpY">
+                                <rect key="frame" x="30" y="80" width="548" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-UW-sWS">
+                                <rect key="frame" x="532" y="28" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Agn-EC-FWt"/>
+                                    <constraint firstAttribute="height" constant="30" id="O8g-7F-MO6"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message and accounts for the ones left behind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-IC-Ss9">
+                                <rect key="frame" x="106" y="14" width="389" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DMM-lV-7jf" firstAttribute="leading" secondItem="fmB-1Z-ILU" secondAttribute="leading" id="50R-n7-GeQ"/>
+                            <constraint firstItem="bwF-IC-Ss9" firstAttribute="bottom" secondItem="SdO-MT-bpY" secondAttribute="bottom" constant="-253" id="Dz8-JC-pBy"/>
+                            <constraint firstItem="E5x-UW-sWS" firstAttribute="top" secondItem="fmB-1Z-ILU" secondAttribute="bottom" constant="8" id="G2h-cH-HBn"/>
+                            <constraint firstItem="E5x-UW-sWS" firstAttribute="trailing" secondItem="SdO-MT-bpY" secondAttribute="trailing" id="GD8-b9-F7W"/>
+                            <constraint firstItem="SdO-MT-bpY" firstAttribute="top" secondItem="fmB-1Z-ILU" secondAttribute="bottom" constant="60" id="Iqz-26-Axo"/>
+                            <constraint firstAttribute="centerX" secondItem="bwF-IC-Ss9" secondAttribute="centerX" constant="-0.5" id="Iyu-ZJ-Y4N"/>
+                            <constraint firstItem="bwF-IC-Ss9" firstAttribute="leading" secondItem="RSp-MX-8I0" secondAttribute="leadingMargin" constant="90" id="Loj-v6-rXE"/>
+                            <constraint firstAttribute="centerX" secondItem="SdO-MT-bpY" secondAttribute="centerX" constant="-4" id="NgZ-1p-MC5"/>
+                            <constraint firstItem="XdG-Oc-s41" firstAttribute="top" secondItem="SdO-MT-bpY" secondAttribute="bottom" constant="270" id="XMQ-tF-n3h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SdO-MT-bpY" secondAttribute="trailing" constant="6" id="aBt-mI-qaR"/>
                             <constraint firstItem="DMM-lV-7jf" firstAttribute="top" secondItem="RSp-MX-8I0" secondAttribute="top" id="byf-kd-ZgZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bwF-IC-Ss9" secondAttribute="trailing" constant="89" id="cJg-hT-hc1"/>
+                            <constraint firstItem="SdO-MT-bpY" firstAttribute="bottom" secondItem="E5x-UW-sWS" secondAttribute="bottom" constant="272" id="eg1-BS-nKj"/>
+                            <constraint firstItem="bwF-IC-Ss9" firstAttribute="top" secondItem="fmB-1Z-ILU" secondAttribute="bottom" constant="-6" id="liT-Kr-PbW"/>
+                            <constraint firstItem="SdO-MT-bpY" firstAttribute="leading" secondItem="RSp-MX-8I0" secondAttribute="leadingMargin" constant="14" id="m4E-T7-12g"/>
                             <constraint firstItem="DMM-lV-7jf" firstAttribute="width" secondItem="RSp-MX-8I0" secondAttribute="width" id="oLC-d8-Jpa"/>
                         </constraints>
                     </view>
