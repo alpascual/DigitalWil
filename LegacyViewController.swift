@@ -9,6 +9,7 @@
 import UIKit
 import LocalAuthentication
 
+
 class LegacyViewController: MasterPage {
 
     let touchIDContext = LAContext()
@@ -19,6 +20,11 @@ class LegacyViewController: MasterPage {
         viewControllerIndex = 1
         
         super.viewDidLoad()
+        
+        //https://github.com/pkluz/PKHUD
+        var contentView = HUDContentView.ProgressView()
+        HUDController.sharedController.contentView = contentView
+        HUDController.sharedController.show()
     
         var authError: NSError? = nil
         
@@ -35,6 +41,7 @@ class LegacyViewController: MasterPage {
                 {
                     // Don't let them in!
                     println("you are out")
+                    
                 }
             })
         }

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Configuration.swift"
-            timestampString = "430941625.281013"
+            timestampString = "430966160.509464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "setBestTimeOfDay(_:)"
             landmarkType = "5">
          </BreakpointContent>

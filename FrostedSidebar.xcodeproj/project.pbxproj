@@ -31,6 +31,14 @@
 		88C4CF8819ABAFF800C5C726 /* warning.png in Resources */ = {isa = PBXBuildFile; fileRef = 88C4CF8619ABAFF800C5C726 /* warning.png */; };
 		88FBE7DA19AD29E3009F061D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7D919AD29E3009F061D /* Configuration.swift */; };
 		88FBE7DC19AD52DD009F061D /* EditConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7DB19AD52DD009F061D /* EditConfigurationViewController.swift */; };
+		88FBE7F719B004FC009F061D /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7EE19B004FC009F061D /* FrameView.swift */; };
+		88FBE7F819B004FC009F061D /* HUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7EF19B004FC009F061D /* HUDAssets.swift */; };
+		88FBE7F919B004FC009F061D /* HUDContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7F019B004FC009F061D /* HUDContentView.swift */; };
+		88FBE7FA19B004FC009F061D /* HUDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7F119B004FC009F061D /* HUDController.swift */; };
+		88FBE7FB19B004FC009F061D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE7F219B004FC009F061D /* Images.xcassets */; };
+		88FBE7FC19B004FC009F061D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE7F319B004FC009F061D /* Info.plist */; };
+		88FBE7FD19B004FC009F061D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7F519B004FC009F061D /* Window.swift */; };
+		88FBE7FE19B004FC009F061D /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7F619B004FC009F061D /* WindowRootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +79,15 @@
 		88C4CF8619ABAFF800C5C726 /* warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warning.png; sourceTree = "<group>"; };
 		88FBE7D919AD29E3009F061D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = SOURCE_ROOT; };
 		88FBE7DB19AD52DD009F061D /* EditConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditConfigurationViewController.swift; sourceTree = SOURCE_ROOT; };
+		88FBE7EE19B004FC009F061D /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		88FBE7EF19B004FC009F061D /* HUDAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDAssets.swift; sourceTree = "<group>"; };
+		88FBE7F019B004FC009F061D /* HUDContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDContentView.swift; sourceTree = "<group>"; };
+		88FBE7F119B004FC009F061D /* HUDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDController.swift; sourceTree = "<group>"; };
+		88FBE7F219B004FC009F061D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		88FBE7F319B004FC009F061D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FBE7F419B004FC009F061D /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
+		88FBE7F519B004FC009F061D /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		88FBE7F619B004FC009F061D /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +128,7 @@
 		208E5DF0196DBE6F005653B3 /* FrostedSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				88FBE7ED19B004FC009F061D /* PKHUD */,
 				88C4CF8419ABAFF800C5C726 /* Resources */,
 				88C4CF7A19A8086500C5C726 /* FrostedSidebar.swift */,
 				208E5DF2196DBE6F005653B3 /* Info.plist */,
@@ -155,6 +173,22 @@
 				88C4CF8619ABAFF800C5C726 /* warning.png */,
 			);
 			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		88FBE7ED19B004FC009F061D /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				88FBE7EE19B004FC009F061D /* FrameView.swift */,
+				88FBE7EF19B004FC009F061D /* HUDAssets.swift */,
+				88FBE7F019B004FC009F061D /* HUDContentView.swift */,
+				88FBE7F119B004FC009F061D /* HUDController.swift */,
+				88FBE7F219B004FC009F061D /* Images.xcassets */,
+				88FBE7F319B004FC009F061D /* Info.plist */,
+				88FBE7F419B004FC009F061D /* PKHUD.h */,
+				88FBE7F519B004FC009F061D /* Window.swift */,
+				88FBE7F619B004FC009F061D /* WindowRootViewController.swift */,
+			);
+			path = PKHUD;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -243,6 +277,7 @@
 			files = (
 				20B553BF19701F1F006165BF /* burger.png in Resources */,
 				20B553C219701F1F006165BF /* gear.png in Resources */,
+				88FBE7FC19B004FC009F061D /* Info.plist in Resources */,
 				20B553C519701F1F006165BF /* globe@2x.png in Resources */,
 				20B553C019701F1F006165BF /* burger@2x.png in Resources */,
 				88C4CF8819ABAFF800C5C726 /* warning.png in Resources */,
@@ -252,6 +287,7 @@
 				20B553C119701F1F006165BF /* click.gif in Resources */,
 				20B553BE19701F1F006165BF /* Background.jpg in Resources */,
 				2008D6A61970231B00B89D6C /* Images.xcassets in Resources */,
+				88FBE7FB19B004FC009F061D /* Images.xcassets in Resources */,
 				20B553C319701F1F006165BF /* gear@2x.png in Resources */,
 				88C4CF8719ABAFF800C5C726 /* safe.png in Resources */,
 				20B553CC19701F1F006165BF /* star@2x.png in Resources */,
@@ -274,14 +310,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FBE7F819B004FC009F061D /* HUDAssets.swift in Sources */,
+				88FBE7FD19B004FC009F061D /* Window.swift in Sources */,
 				88C4CF8219ABA4D100C5C726 /* ProfileViewController.swift in Sources */,
 				88C4CF7D19A80EFB00C5C726 /* MasterPage.swift in Sources */,
 				88FBE7DA19AD29E3009F061D /* Configuration.swift in Sources */,
+				88FBE7F719B004FC009F061D /* FrameView.swift in Sources */,
 				88C4CF7B19A8086500C5C726 /* FrostedSidebar.swift in Sources */,
 				2008D69E197021D300B89D6C /* ViewController.swift in Sources */,
+				88FBE7FA19B004FC009F061D /* HUDController.swift in Sources */,
 				88FBE7DC19AD52DD009F061D /* EditConfigurationViewController.swift in Sources */,
 				2008D69D197021D300B89D6C /* AppDelegate.swift in Sources */,
 				88C4CF7F19A8103500C5C726 /* LegacyViewController.swift in Sources */,
+				88FBE7FE19B004FC009F061D /* WindowRootViewController.swift in Sources */,
+				88FBE7F919B004FC009F061D /* HUDContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
