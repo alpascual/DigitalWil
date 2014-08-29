@@ -13,6 +13,7 @@ class ViewController: MasterPage {
     
     
     
+    @IBOutlet var setupButton: UIButton!
 	override func viewDidLoad() {
         
         viewControllerIndex = 0
@@ -23,24 +24,10 @@ class ViewController: MasterPage {
         
 	}
     
-    /*
-LAContext *myContext = [[LAContext alloc] init];
-NSError *authError = nil;
-NSString *myLocalizedReasonString = <#String explaining why app needs authentication#>;
-
-if ([myContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]) {
-[myContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
-localizedReason:myLocalizedReasonString
-reply:^(BOOL success, NSError *error) {
-if (success) {
-// User authenticated successfully, take appropriate action
-} else {
-// User did not authenticate successfully, look at error and take appropriate action
-}
-}];
-} else {
-// Could not evaluate policy; look at authError and present an appropriate message to user
-}*/
+    
+    @IBAction func setupButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("SecondSegue", sender: self)
+    }
 
 
 
