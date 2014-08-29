@@ -40,6 +40,13 @@
 		88FBE7FD19B004FC009F061D /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7F519B004FC009F061D /* Window.swift */; };
 		88FBE7FE19B004FC009F061D /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7F619B004FC009F061D /* WindowRootViewController.swift */; };
 		88FBE80019B10819009F061D /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FBE7FF19B10819009F061D /* NotificationScheduler.swift */; };
+		88FBE80919B125A2009F061D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80219B125A2009F061D /* Icon-72.png */; };
+		88FBE80A19B125A2009F061D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80319B125A2009F061D /* Icon-72@2x.png */; };
+		88FBE80B19B125A2009F061D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80419B125A2009F061D /* Icon.png */; };
+		88FBE80C19B125A2009F061D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80519B125A2009F061D /* Icon@2x.png */; };
+		88FBE80D19B125A2009F061D /* ITunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80619B125A2009F061D /* ITunesArtwork.png */; };
+		88FBE80E19B125A2009F061D /* ITunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80719B125A2009F061D /* ITunesArtwork@2x.png */; };
+		88FBE80F19B125A2009F061D /* Original.png in Resources */ = {isa = PBXBuildFile; fileRef = 88FBE80819B125A2009F061D /* Original.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +97,13 @@
 		88FBE7F519B004FC009F061D /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		88FBE7F619B004FC009F061D /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
 		88FBE7FF19B10819009F061D /* NotificationScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = SOURCE_ROOT; };
+		88FBE80219B125A2009F061D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		88FBE80319B125A2009F061D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		88FBE80419B125A2009F061D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		88FBE80519B125A2009F061D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		88FBE80619B125A2009F061D /* ITunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ITunesArtwork.png; sourceTree = "<group>"; };
+		88FBE80719B125A2009F061D /* ITunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ITunesArtwork@2x.png"; sourceTree = "<group>"; };
+		88FBE80819B125A2009F061D /* Original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Original.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +144,7 @@
 		208E5DF0196DBE6F005653B3 /* FrostedSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				88FBE80119B125A2009F061D /* Icons */,
 				88FBE7ED19B004FC009F061D /* PKHUD */,
 				88C4CF8419ABAFF800C5C726 /* Resources */,
 				88C4CF7A19A8086500C5C726 /* FrostedSidebar.swift */,
@@ -192,6 +207,20 @@
 				88FBE7F619B004FC009F061D /* WindowRootViewController.swift */,
 			);
 			path = PKHUD;
+			sourceTree = SOURCE_ROOT;
+		};
+		88FBE80119B125A2009F061D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				88FBE80219B125A2009F061D /* Icon-72.png */,
+				88FBE80319B125A2009F061D /* Icon-72@2x.png */,
+				88FBE80419B125A2009F061D /* Icon.png */,
+				88FBE80519B125A2009F061D /* Icon@2x.png */,
+				88FBE80619B125A2009F061D /* ITunesArtwork.png */,
+				88FBE80719B125A2009F061D /* ITunesArtwork@2x.png */,
+				88FBE80819B125A2009F061D /* Original.png */,
+			);
+			path = Icons;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -280,22 +309,29 @@
 			files = (
 				20B553BF19701F1F006165BF /* burger.png in Resources */,
 				20B553C219701F1F006165BF /* gear.png in Resources */,
+				88FBE80A19B125A2009F061D /* Icon-72@2x.png in Resources */,
 				88FBE7FC19B004FC009F061D /* Info.plist in Resources */,
 				20B553C519701F1F006165BF /* globe@2x.png in Resources */,
+				88FBE80C19B125A2009F061D /* Icon@2x.png in Resources */,
 				20B553C019701F1F006165BF /* burger@2x.png in Resources */,
 				88C4CF8819ABAFF800C5C726 /* warning.png in Resources */,
 				20B553CB19701F1F006165BF /* star.png in Resources */,
 				2008D6A01970223100B89D6C /* Main.storyboard in Resources */,
 				20B553C419701F1F006165BF /* globe.png in Resources */,
+				88FBE80E19B125A2009F061D /* ITunesArtwork@2x.png in Resources */,
 				20B553C119701F1F006165BF /* click.gif in Resources */,
+				88FBE80F19B125A2009F061D /* Original.png in Resources */,
 				20B553BE19701F1F006165BF /* Background.jpg in Resources */,
+				88FBE80B19B125A2009F061D /* Icon.png in Resources */,
 				2008D6A61970231B00B89D6C /* Images.xcassets in Resources */,
+				88FBE80919B125A2009F061D /* Icon-72.png in Resources */,
 				88FBE7FB19B004FC009F061D /* Images.xcassets in Resources */,
 				20B553C319701F1F006165BF /* gear@2x.png in Resources */,
 				88C4CF8719ABAFF800C5C726 /* safe.png in Resources */,
 				20B553CC19701F1F006165BF /* star@2x.png in Resources */,
 				20B553C919701F1F006165BF /* profile.png in Resources */,
 				20B553CA19701F1F006165BF /* profile@2x.png in Resources */,
+				88FBE80D19B125A2009F061D /* ITunesArtwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@ class LegacyViewController: MasterPage {
 
     let touchIDContext = LAContext()
     
+    @IBOutlet var save: UIButton!
     @IBOutlet var textLegacy: UITextView!
     override func viewDidLoad() {
         
@@ -39,7 +40,8 @@ class LegacyViewController: MasterPage {
                     // Don't let them in!
                     println("you are out")
                     HUDController.sharedController.contentView = HUDContentView.TextView(text: "Failed Authentication")
-                    
+                    self.textLegacy.hidden = true
+                    self.save.enabled = false
                 }
             })
         }
