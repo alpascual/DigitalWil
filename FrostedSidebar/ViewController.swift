@@ -19,16 +19,12 @@ class ViewController: MasterPage {
         viewControllerIndex = 0
         
 		super.viewDidLoad()
-        
-        
-        
 	}
     
     
     @IBAction func setupButtonPressed(sender: AnyObject) {
         self.performSegueWithIdentifier("SecondSegue", sender: self)
     }
-
 
 
 }
