@@ -21,11 +21,7 @@ class LegacyViewController: MasterPage {
         
         super.viewDidLoad()
         
-        //https://github.com/pkluz/PKHUD
-        var contentView = HUDContentView.ProgressView()
-        HUDController.sharedController.contentView = contentView
-        HUDController.sharedController.show()
-    
+        HUDController.sharedController.contentView = HUDContentView.TextView(text: "Loading...")
         var authError: NSError? = nil
         
         // Request touchID first
@@ -36,11 +32,13 @@ class LegacyViewController: MasterPage {
                     // Got in
                     println("you are in")
                     self.loadText()
+                    HUDController.sharedController.contentView = HUDContentView.TextView(text: "Authenticated")
                 }
                 else
                 {
                     // Don't let them in!
                     println("you are out")
+                    HUDController.sharedController.contentView = HUDContentView.TextView(text: "Failed Authentication")
                     
                 }
             })
@@ -49,7 +47,12 @@ class LegacyViewController: MasterPage {
         {
             // Message: Your device does not have a Touch ID, we can secure this app better by Touch ID
             println("Another kind of authentication")
+            HUDController.sharedController.contentView = HUDContentView.TextView(text: "TouchID not found")
         }
+        
+        //https://github.com/pkluz/PKHUD
+        HUDController.sharedController.show()
+        HUDController.sharedController.hide(afterDelay: 2.0)
     }
     
     @IBAction func saveText(sender: AnyObject)
