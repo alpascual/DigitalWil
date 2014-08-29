@@ -120,6 +120,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveText:" destination="hIR-aT-Z1I" eventType="touchDown" id="Bk6-Zv-iy5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message and accounts for the ones left behind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-IC-Ss9">
                                 <rect key="frame" x="106" y="14" width="389" height="63"/>
@@ -149,6 +152,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textLegacy" destination="SdO-MT-bpY" id="3gz-3p-TpF"/>
                         <segue destination="Rmg-DR-U1i" kind="show" identifier="SecondSegue" id="m0O-ij-KYu"/>
                         <segue destination="yFd-Pw-cF0" kind="show" identifier="ZeroSegue" id="h4v-sS-Jnz"/>
                     </connections>

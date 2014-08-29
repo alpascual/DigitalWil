@@ -17,6 +17,8 @@ class Configuration
     let BestTimeOfDay = "Configuration_BestTimeOfDay"
     let HowLongBetweenRequests = "Configuration_HowLongBetweenRequests"
     
+    let ConfigurationText = "Configuration_Text"
+    
     init()
     {
         var defaults = NSUserDefaults()
@@ -150,5 +152,23 @@ class Configuration
         default:
             return ""
         }
+    }
+    
+    
+    func getLegacyText() -> String
+    {
+        var defaults = NSUserDefaults()
+        var text : String! = defaults.objectForKey(ConfigurationText) as String
+        if text == nil {
+            text = "Add any extra message you want here..."
+        }
+        return text
+    }
+    
+    func setLegacyText(text : String)
+    {
+        var defaults = NSUserDefaults()
+        defaults.setObject(text, forKey: ConfigurationText)
+        defaults.synchronize()
     }
 }

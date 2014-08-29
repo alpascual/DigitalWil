@@ -13,6 +13,7 @@ class LegacyViewController: MasterPage {
 
     let touchIDContext = LAContext()
     
+    @IBOutlet var textLegacy: UITextView!
     override func viewDidLoad() {
         
         viewControllerIndex = 1
@@ -28,6 +29,7 @@ class LegacyViewController: MasterPage {
                 if ( success) {
                     // Got in
                     println("you are in")
+                    self.loadText()
                 }
                 else
                 {
@@ -42,5 +44,19 @@ class LegacyViewController: MasterPage {
             println("Another kind of authentication")
         }
     }
+    
+    @IBAction func saveText(sender: AnyObject)
+    {
+        let config = Configuration()
+        config.setLegacyText(self.textLegacy!.text)
+    }
+    
+    func loadText()
+    {
+        let config = Configuration()
+        self.textLegacy!.text = config.getLegacyText()
+    }
+    
+    
     
 }
