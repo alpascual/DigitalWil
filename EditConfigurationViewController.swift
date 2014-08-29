@@ -94,6 +94,11 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
                 config.setHowLongBetweenRequests(self.selectedRow)
             }
         }
+        
+        // Redo the notifications
+        let noti = NotificationScheduler()
+        noti.ChangesOnNotification()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -16,9 +16,11 @@ class NotificationScheduler: NSObject {
     
     func ChangesOnNotification()
     {
-        
-        UIApplication.sharedApplication().cancelAllLocalNotifications()
-        
+        let configuration = Configuration()
+        if ( configuration.Code.isEmpty == false ) {
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+            self.ScheduleAll()
+        }
     }
     
     func ScheduleAll()
@@ -26,12 +28,6 @@ class NotificationScheduler: NSObject {
         let notification = UILocalNotification()
         let configuration = Configuration()
         configuration.getNumberOfTriesValue()
-        
-        /*UILocalNotification* localNotification = [[UILocalNotificationalloc] init];
-        localNotification.fireDate = [NSDatedateWithTimeIntervalSinceNow:30];
-        localNotification.alertBody = @"Alert message goes here";
-        localNotification.timeZone = [NSTimeZonedefaultTimeZone];
-        [[UIApplicationsharedApplication] scheduleLocalNotification:localNotification];*/
         
         // Schedule first one
         var seconds : Double = Double(configuration.getHowOftenValue().toInt()!)
@@ -47,7 +43,7 @@ class NotificationScheduler: NSObject {
         for var i = 0; i < configuration.getNumberOfTriesValue(); i++ {
             let tempNotification = UILocalNotification()
             // increasing one day
-            lastday = lastday + Double(i)
+            lastday = lastday + Double((((i * 60) * 60) * 24))
             tempNotification.fireDate = NSDate(timeIntervalSinceNow: lastday)
             tempNotification.alertBody = "Remaining " + String(configuration.getNumberOfTriesValue()-i) + " days before showing the password"
             tempNotification.timeZone = NSTimeZone.defaultTimeZone()
@@ -55,6 +51,20 @@ class NotificationScheduler: NSObject {
         }
         
         // Last notification showing the password
+        let lastNotification = UILocalNotification()
+        lastday = lastday + Double((((1 * 60) * 60) * 24))
+        lastNotification.fireDate = NSDate(timeIntervalSinceNow: lastday)
+        lastNotification.alertBody = "The owner of the phone is gone, unlock it, this is the password: " + configuration.Code
+        lastNotification.timeZone = NSTimeZone.defaultTimeZone()
+        UIApplication.sharedApplication().scheduleLocalNotification(lastNotification)
+        
+        // One last one in case
+        let lastNotification2 = UILocalNotification()
+        lastday = lastday + Double((((1 * 60) * 60) * 24))
+        lastNotification2.fireDate = NSDate(timeIntervalSinceNow: lastday)
+        lastNotification2.alertBody = "The owner of the phone is gone, unlock it, this is the password: " + configuration.Code + " last communication"
+        lastNotification2.timeZone = NSTimeZone.defaultTimeZone()
+        UIApplication.sharedApplication().scheduleLocalNotification(lastNotification2)
         
     }
 }
