@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let noti = NotificationScheduler()
         noti.ChangesOnNotification()
         
-        if launchOptions == UIApplicationLaunchOptionsLocalNotificationKey {
-            // Maybe show a screen to thank the user
+        if launchOptions != nil {
+            if launchOptions == UIApplicationLaunchOptionsLocalNotificationKey {
+                // Maybe show a screen to thank the user
+            }
         }
         return true
     }

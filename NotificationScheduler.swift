@@ -17,7 +17,11 @@ class NotificationScheduler: NSObject {
     func ChangesOnNotification()
     {
         let configuration = Configuration()
-        if ( configuration.Code.isEmpty == false ) {
+        
+        var defaults = NSUserDefaults()
+        var isThere: AnyObject? = defaults.objectForKey(configuration.Code)
+        
+        if ( isThere != nil  ) {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             self.ScheduleAll()
         }
@@ -27,7 +31,6 @@ class NotificationScheduler: NSObject {
     {
         let notification = UILocalNotification()
         let configuration = Configuration()
-        configuration.getNumberOfTriesValue()
         
         // Schedule first one
         var seconds : Double = Double(configuration.getHowOftenValue().toInt()!)

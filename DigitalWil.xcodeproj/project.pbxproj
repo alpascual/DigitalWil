@@ -64,9 +64,9 @@
 		2008D69C197021D300B89D6C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = FrostedSidebar/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		2008D69F1970223100B89D6C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = FrostedSidebar/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		2008D6A51970231B00B89D6C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
-		208E5DEE196DBE6F005653B3 /* FrostedSidebar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrostedSidebar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		208E5DEE196DBE6F005653B3 /* DigitalWil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalWil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208E5DF2196DBE6F005653B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = FrostedSidebar/Info.plist; sourceTree = "<group>"; };
-		208E5E00196DBE6F005653B3 /* FrostedSidebarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrostedSidebarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		208E5E00196DBE6F005653B3 /* DigitalWilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalWilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B553AF19701F1F006165BF /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = FrostedSidebar/Background.jpg; sourceTree = SOURCE_ROOT; };
 		20B553B019701F1F006165BF /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burger.png; path = FrostedSidebar/burger.png; sourceTree = SOURCE_ROOT; };
 		20B553B119701F1F006165BF /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "burger@2x.png"; path = "FrostedSidebar/burger@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -135,8 +135,8 @@
 		208E5DEF196DBE6F005653B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				208E5DEE196DBE6F005653B3 /* FrostedSidebar.app */,
-				208E5E00196DBE6F005653B3 /* FrostedSidebarTests.xctest */,
+				208E5DEE196DBE6F005653B3 /* DigitalWil.app */,
+				208E5E00196DBE6F005653B3 /* DigitalWilTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		208E5DED196DBE6F005653B3 /* FrostedSidebar */ = {
+		208E5DED196DBE6F005653B3 /* DigitalWil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 208E5E0A196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "FrostedSidebar" */;
+			buildConfigurationList = 208E5E0A196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "DigitalWil" */;
 			buildPhases = (
 				208E5DEA196DBE6F005653B3 /* Sources */,
 				208E5DEB196DBE6F005653B3 /* Frameworks */,
@@ -238,14 +238,14 @@
 			);
 			dependencies = (
 			);
-			name = FrostedSidebar;
+			name = DigitalWil;
 			productName = CustomStuff;
-			productReference = 208E5DEE196DBE6F005653B3 /* FrostedSidebar.app */;
+			productReference = 208E5DEE196DBE6F005653B3 /* DigitalWil.app */;
 			productType = "com.apple.product-type.application";
 		};
-		208E5DFF196DBE6F005653B3 /* FrostedSidebarTests */ = {
+		208E5DFF196DBE6F005653B3 /* DigitalWilTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 208E5E0D196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "FrostedSidebarTests" */;
+			buildConfigurationList = 208E5E0D196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "DigitalWilTests" */;
 			buildPhases = (
 				208E5DFC196DBE6F005653B3 /* Sources */,
 				208E5DFD196DBE6F005653B3 /* Frameworks */,
@@ -256,9 +256,9 @@
 			dependencies = (
 				208E5E02196DBE6F005653B3 /* PBXTargetDependency */,
 			);
-			name = FrostedSidebarTests;
+			name = DigitalWilTests;
 			productName = CustomStuffTests;
-			productReference = 208E5E00196DBE6F005653B3 /* FrostedSidebarTests.xctest */;
+			productReference = 208E5E00196DBE6F005653B3 /* DigitalWilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +280,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 208E5DE9196DBE6F005653B3 /* Build configuration list for PBXProject "FrostedSidebar" */;
+			buildConfigurationList = 208E5DE9196DBE6F005653B3 /* Build configuration list for PBXProject "DigitalWil" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -296,8 +296,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				208E5DED196DBE6F005653B3 /* FrostedSidebar */,
-				208E5DFF196DBE6F005653B3 /* FrostedSidebarTests */,
+				208E5DED196DBE6F005653B3 /* DigitalWil */,
+				208E5DFF196DBE6F005653B3 /* DigitalWilTests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,7 +379,7 @@
 /* Begin PBXTargetDependency section */
 		208E5E02196DBE6F005653B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 208E5DED196DBE6F005653B3 /* FrostedSidebar */;
+			target = 208E5DED196DBE6F005653B3 /* DigitalWil */;
 			targetProxy = 208E5E01196DBE6F005653B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -471,7 +471,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/FrostedSidebar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FrostedSidebar;
+				PRODUCT_NAME = DigitalWil;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -486,7 +486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/FrostedSidebar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = FrostedSidebar;
+				PRODUCT_NAME = DigitalWil;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -506,7 +506,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FrostedSidebar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = FrostedSidebarTests;
+				PRODUCT_NAME = DigitalWilTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -521,7 +521,7 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/FrostedSidebar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = FrostedSidebarTests;
+				PRODUCT_NAME = DigitalWilTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -529,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		208E5DE9196DBE6F005653B3 /* Build configuration list for PBXProject "FrostedSidebar" */ = {
+		208E5DE9196DBE6F005653B3 /* Build configuration list for PBXProject "DigitalWil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				208E5E08196DBE6F005653B3 /* Debug */,
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		208E5E0A196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "FrostedSidebar" */ = {
+		208E5E0A196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "DigitalWil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				208E5E0B196DBE6F005653B3 /* Debug */,
@@ -547,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		208E5E0D196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "FrostedSidebarTests" */ = {
+		208E5E0D196DBE6F005653B3 /* Build configuration list for PBXNativeTarget "DigitalWilTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				208E5E0E196DBE6F005653B3 /* Debug */,
