@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if launchOptions != nil {
             if launchOptions == UIApplicationLaunchOptionsLocalNotificationKey {
                 // Maybe show a screen to thank the user
+                
+                //Cannot do that as I don't know if was after displaying the password
+                //HUDController.sharedController.contentView = HUDContentView.TextView(text: "Got it, you still alive and well.")
+                //HUDController.sharedController.show()
+                //HUDController.sharedController.hide(afterDelay: 2.0)
             }
         }
         return true
