@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "208E5DED196DBE6F005653B3"
-               BuildableName = "FrostedSidebar.app"
-               BlueprintName = "FrostedSidebar"
-               ReferencedContainer = "container:FrostedSidebar.xcodeproj">
+               BuildableName = "DigitalWil.app"
+               BlueprintName = "DigitalWil"
+               ReferencedContainer = "container:DigitalWil.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "208E5DFF196DBE6F005653B3"
-               BuildableName = "FrostedSidebarTests.xctest"
-               BlueprintName = "FrostedSidebarTests"
-               ReferencedContainer = "container:FrostedSidebar.xcodeproj">
+               BuildableName = "DigitalWilTests.xctest"
+               BlueprintName = "DigitalWilTests"
+               ReferencedContainer = "container:DigitalWil.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "208E5DFF196DBE6F005653B3"
-               BuildableName = "FrostedSidebarTests.xctest"
-               BlueprintName = "FrostedSidebarTests"
-               ReferencedContainer = "container:FrostedSidebar.xcodeproj">
+               BuildableName = "DigitalWilTests.xctest"
+               BlueprintName = "DigitalWilTests"
+               ReferencedContainer = "container:DigitalWil.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "208E5DED196DBE6F005653B3"
-            BuildableName = "FrostedSidebar.app"
-            BlueprintName = "FrostedSidebar"
-            ReferencedContainer = "container:FrostedSidebar.xcodeproj">
+            BuildableName = "DigitalWil.app"
+            BlueprintName = "DigitalWil"
+            ReferencedContainer = "container:DigitalWil.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "208E5DED196DBE6F005653B3"
-            BuildableName = "FrostedSidebar.app"
-            BlueprintName = "FrostedSidebar"
-            ReferencedContainer = "container:FrostedSidebar.xcodeproj">
+            BuildableName = "DigitalWil.app"
+            BlueprintName = "DigitalWil"
+            ReferencedContainer = "container:DigitalWil.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "208E5DED196DBE6F005653B3"
-            BuildableName = "FrostedSidebar.app"
-            BlueprintName = "FrostedSidebar"
-            ReferencedContainer = "container:FrostedSidebar.xcodeproj">
+            BuildableName = "DigitalWil.app"
+            BlueprintName = "DigitalWil"
+            ReferencedContainer = "container:DigitalWil.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
