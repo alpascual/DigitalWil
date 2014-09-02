@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yFd-Pw-cF0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yFd-Pw-cF0">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
+        <deployment defaultVersion="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
@@ -38,11 +38,11 @@
                                     <action selector="setupButtonPressed:" destination="yFd-Pw-cF0" eventType="touchDown" id="iPy-SD-Gge"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8X-lf-jKt">
-                                <rect key="frame" x="180" y="110" width="240" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Original.png" translatesAutoresizingMaskIntoConstraints="NO" id="C8X-lf-jKt">
+                                <rect key="frame" x="217" y="110" width="167" height="122"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="V6U-v0-Vuf"/>
-                                    <constraint firstAttribute="width" constant="240" id="jcO-uN-w7E"/>
+                                    <constraint firstAttribute="height" constant="122" id="V6U-v0-Vuf"/>
+                                    <constraint firstAttribute="width" constant="167" id="jcO-uN-w7E"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let you family access your iPhone when you are gone." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKb-Yg-Hct">
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvg-aq-5CD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="417"/>
+            <point key="canvasLocation" x="354" y="428"/>
         </scene>
         <!--Legacy View Controller-->
         <scene sceneID="p3J-Yp-TC0">
@@ -194,9 +194,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="safe.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jy6-Rh-qIF">
-                                <rect key="frame" x="0.0" y="75" width="600" height="4"/>
+                                <rect key="frame" x="0.0" y="75" width="600" height="6"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="9WK-pg-5Bg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="6" id="2ns-EF-0QN"/>
+                                    <constraint firstAttribute="height" constant="6" id="8Av-BD-rmq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ax7-MY-bAx">
@@ -212,6 +213,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="saY-Yc-S9N" secondAttribute="trailing" id="AJ0-v4-uIi"/>
+                            <constraint firstItem="Jy6-Rh-qIF" firstAttribute="leading" secondItem="vge-uR-xDG" secondAttribute="leadingMargin" constant="-16" id="D7g-Rd-xd5"/>
                             <constraint firstItem="saY-Yc-S9N" firstAttribute="top" secondItem="Ax7-MY-bAx" secondAttribute="bottom" constant="53" id="F5x-2k-bEk"/>
                             <constraint firstItem="Ax7-MY-bAx" firstAttribute="top" secondItem="P19-b5-Pvb" secondAttribute="bottom" constant="8" symbolic="YES" id="JBC-8i-NjM"/>
                             <constraint firstItem="Jy6-Rh-qIF" firstAttribute="leading" secondItem="P19-b5-Pvb" secondAttribute="leading" id="KGD-eY-FvU"/>
@@ -219,7 +221,9 @@
                             <constraint firstItem="Jy6-Rh-qIF" firstAttribute="top" secondItem="Ax7-MY-bAx" secondAttribute="bottom" constant="9" id="R9S-Ta-XCr"/>
                             <constraint firstItem="saY-Yc-S9N" firstAttribute="width" secondItem="vge-uR-xDG" secondAttribute="width" id="TJA-dl-YZc"/>
                             <constraint firstItem="Jy6-Rh-qIF" firstAttribute="trailing" secondItem="P19-b5-Pvb" secondAttribute="trailing" id="d8j-Mx-h0S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jy6-Rh-qIF" secondAttribute="trailing" constant="-16" id="i4q-9s-Z0w"/>
                             <constraint firstAttribute="bottom" secondItem="saY-Yc-S9N" secondAttribute="bottom" id="poM-wA-Nj5"/>
+                            <constraint firstItem="Jy6-Rh-qIF" firstAttribute="top" secondItem="P19-b5-Pvb" secondAttribute="bottom" constant="55" id="yHw-jk-zAv"/>
                             <constraint firstItem="Ax7-MY-bAx" firstAttribute="leading" secondItem="vge-uR-xDG" secondAttribute="leading" constant="85" id="zgy-Ge-kfn"/>
                         </constraints>
                     </view>
@@ -321,13 +325,14 @@
     </scenes>
     <resources>
         <image name="Background.jpg" width="63" height="111"/>
+        <image name="Original.png" width="256" height="256"/>
         <image name="burger" width="19" height="17"/>
         <image name="safe.png" width="640" height="1007"/>
         <image name="warning.png" width="640" height="1007"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LmO-ta-MDy"/>
-        <segue reference="m0O-ij-KYu"/>
+        <segue reference="24K-Bs-Gkt"/>
         <segue reference="wEa-OZ-SzU"/>
+        <segue reference="LmO-ta-MDy"/>
     </inferredMetricsTieBreakers>
 </document>

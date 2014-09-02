@@ -52,7 +52,8 @@ public class FrostedSidebar: UIViewController {
     //MARK: Private Properties
     
     private var contentView:            UIScrollView                = UIScrollView()
-    var blurView: UIVisualEffectView! =  UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView! //UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark))
+    private var blurView: UIVisualEffectView =  UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Dark))
+    //private var blurView: UIView =  UIView()
     private var dimView:                UIView                      = UIView()
     private var tapGesture:             UITapGestureRecognizer?     = nil
     private var images:                 [UIImage]                   = []
