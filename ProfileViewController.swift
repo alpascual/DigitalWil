@@ -34,12 +34,12 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
     }
     
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return sectionStrings.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         //var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
         var cell : UITableViewCell! = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cell")
@@ -47,12 +47,12 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         // Configure the cell...
-        cell!.textLabel.text = sectionStrings[indexPath.row] as String
-        cell!.textLabel.font = UIFont(name: "ItalicMT", size: 10.0)
-        cell!.textLabel.textColor = UIColor.grayColor()
+        cell!.textLabel!.text = sectionStrings[indexPath.row] as String
+        cell!.textLabel!.font = UIFont(name: "ItalicMT", size: 10.0)
+        cell!.textLabel!.textColor = UIColor.grayColor()
         
-        cell!.detailTextLabel.text = configuration.convertValueFor(self.valueStrings[indexPath.row], position: indexPath.row)
-        cell!.detailTextLabel.font = UIFont(name: "ArialMT", size: 20.0)
+        cell!.detailTextLabel!.text = configuration.convertValueFor(self.valueStrings[indexPath.row], position: indexPath.row)
+        cell!.detailTextLabel!.font = UIFont(name: "ArialMT", size: 20.0)
         
         return cell
     }
@@ -63,8 +63,12 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         self.performSegueWithIdentifier("EditConfiguration", sender: self)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         var editView =  segue.destinationViewController as EditConfigurationViewController
         editView.ConfigurationNumber = self.configurationEdited
     }
+    
+    
+    
+    
 }

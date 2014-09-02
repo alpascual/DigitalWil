@@ -110,13 +110,13 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
     
     
     // returns the number of 'columns' to display.
-    func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
         return 1
     }
     
     // returns the # of rows in each component..
-    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
         let config = Configuration()
         if self.ConfigurationNumber == 2
@@ -132,14 +132,14 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         return 0
     }
     
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String!
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
     {
         let config = Configuration()
         if self.ConfigurationNumber == 2
         {
             var timeOfDayString = config.getTimeOfTheDay()
             if ( config.getTimeOfTheDayValue() == timeOfDayString[row] as String) {
-                pickerView!.selectRow(row, inComponent: component, animated: false)
+                pickerView.selectRow(row, inComponent: component, animated: false)
             }
             return timeOfDayString[row] as String
         }
@@ -147,14 +147,14 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         {
             var howOftenString = config.getHowOften()
             if ( config.getHowOftenValue() == howOftenString[row] as String) {
-                pickerView!.selectRow(row, inComponent: component, animated: false)
+                pickerView.selectRow(row, inComponent: component, animated: false)
             }
             return howOftenString[row] as String
         }
         return ""
     }
     
-    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int)
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
         if self.ConfigurationNumber == 2 {
             self.selectedRow = row + 1

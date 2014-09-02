@@ -377,8 +377,8 @@ public class FrostedSidebar: UIViewController {
     }
     
     private func layoutSubviews(){
-        let x = showFromRight ? parentViewController.view.bounds.size.width - width : 0
-        contentView.frame = CGRect(x: x, y: 0, width: width, height: parentViewController.view.bounds.size.height)
+        let x = showFromRight ? parentViewController!.view.bounds.size.width - width : 0
+        contentView.frame = CGRect(x: x, y: 0, width: width, height: parentViewController!.view.bounds.size.height)
         blurView.frame = contentView.frame
         layoutItems()
     }
