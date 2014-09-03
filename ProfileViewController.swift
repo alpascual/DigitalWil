@@ -64,8 +64,10 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        var editView =  segue.destinationViewController as EditConfigurationViewController
-        editView.ConfigurationNumber = self.configurationEdited
+        if ( segue.identifier == "EditConfiguration") {
+            var editView =  segue.destinationViewController as EditConfigurationViewController
+            editView.ConfigurationNumber = self.configurationEdited
+        }
     }
     
     
