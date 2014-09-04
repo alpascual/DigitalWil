@@ -52,6 +52,7 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
         self.selectPicker!.dataSource = self
         self.selectPicker!.delegate = self
         
+        
         if self.ConfigurationNumber == 0 {
             textValue.text = valuesArray[self.ConfigurationNumber] as String
             textValue.secureTextEntry = true
@@ -185,5 +186,20 @@ class EditConfigurationViewController: UIViewController,UIPickerViewDataSource, 
             
         }
     }
+    
+//    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView
+//    {
+///*UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, pickerView.frame.size.width, 44)];
+//label.backgroundColor = [UIColor grayColor];
+//label.textColor = [UIColor whiteColor];
+//label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:18];
+//label.text = [NSString stringWithFormat:@" %d", row+1];
+//return label;*/
+//        
+//        var label = view as UILabel
+//        label.textColor = UIColor.whiteColor()
+//        
+//        return label
+//    }
 
 }
