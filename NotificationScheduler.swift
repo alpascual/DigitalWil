@@ -95,8 +95,35 @@ class NotificationScheduler: NSObject {
     func insidePreferedWindow(date : NSDate) -> NSDate
     {
         println(date)
-        // TODO: Make sure the timer is on their selected window
         
-        return date
+        //Make sure the timer is on their selected window
+        let calendar = NSCalendar()
+        let conponents : NSDateComponents = calendar.components(NSCalendarUnit.HourCalendarUnit, fromDate: date)
+        var hour = conponents.hour
+        
+        let configuration = Configuration()
+        var timeOfDay = configuration.getTimeOfTheDayValue()
+        var max = 24
+        var min = 19
+        if ( timeOfDay == "Morning")
+        {
+            max = 11
+            min = 8
+        }
+        else if ( timeOfDay == "Afternoon")
+        {
+            max = 18
+            min = 12
+        }
+        
+        while ( hour < min || hour > max)
+        {
+            hour = hour + 1
+        }
+        
+        conponents.hour = hour
+        return calendar.dateFromComponents(conponents)!
+        
+        //return date
     }
 }
