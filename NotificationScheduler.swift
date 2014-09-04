@@ -26,7 +26,16 @@ class NotificationScheduler: NSObject {
         if ( isThere != nil  && isThereHowOften != nil && isThereRepeat != nil) {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             self.ScheduleAll()
+            HUDController.sharedController.contentView = HUDContentView.TextView(text: "Alerts have been scheduled")
         }
+        else
+        {
+            // Display a message that you need all the info and code to be setup
+            HUDController.sharedController.contentView = HUDContentView.TextView(text: "Need to set up a code to schedule alerts")
+        }
+        
+        HUDController.sharedController.show()
+        HUDController.sharedController.hide(afterDelay: 2.0)
     }
     
     func ScheduleAll()
@@ -40,6 +49,7 @@ class NotificationScheduler: NSObject {
         var seconds : Double = Double(betweenRequests)
         var days = self.convertSecondsToDays(seconds)
         notification.fireDate = NSDate(timeIntervalSinceNow: days)
+        notification.applicationIconBadgeNumber=notification.applicationIconBadgeNumber+1        
         notification.alertBody = "Confirm you are still alive and well by clicking the notification"
         notification.timeZone = NSTimeZone.defaultTimeZone()
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
@@ -84,6 +94,7 @@ class NotificationScheduler: NSObject {
     
     func insidePreferedWindow(date : NSDate) -> NSDate
     {
+        println(date)
         // TODO: Make sure the timer is on their selected window
         
         return date
