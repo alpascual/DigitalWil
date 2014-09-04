@@ -26,7 +26,7 @@ class NotificationScheduler: NSObject {
         if ( isThere != nil  && isThereHowOften != nil && isThereRepeat != nil) {
             UIApplication.sharedApplication().cancelAllLocalNotifications()
             self.ScheduleAll()
-            HUDController.sharedController.contentView = HUDContentView.TextView(text: "Alerts have been scheduled")
+            //HUDController.sharedController.contentView = HUDContentView.TextView(text: "Alerts have been scheduled")
         }
         else
         {
@@ -97,8 +97,9 @@ class NotificationScheduler: NSObject {
         println(date)
         
         //Make sure the timer is on their selected window
-        let calendar = NSCalendar()
-        let conponents : NSDateComponents = calendar.components(NSCalendarUnit.HourCalendarUnit, fromDate: date)
+        let calendar = NSCalendar.currentCalendar()
+        var conponents : NSDateComponents = calendar.components(NSCalendarUnit.HourCalendarUnit, fromDate: date)
+        println(conponents)
         var hour = conponents.hour
         
         let configuration = Configuration()
@@ -119,6 +120,10 @@ class NotificationScheduler: NSObject {
         while ( hour < min || hour > max)
         {
             hour = hour + 1
+            if hour > 24
+            {
+                hour = 0
+            }
         }
         
         conponents.hour = hour
