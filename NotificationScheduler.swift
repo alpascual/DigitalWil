@@ -52,7 +52,7 @@ class NotificationScheduler: NSObject {
             let tempNotification = UILocalNotification()
             // increasing one day
             lastday = lastday + self.convertSecondsToDays(Double(i))
-            tempNotification.fireDate = NSDate(timeIntervalSinceNow: lastday)
+            tempNotification.fireDate = self.insidePreferedWindow(NSDate(timeIntervalSinceNow: lastday))
             tempNotification.alertBody = "Remaining " + String(configuration.getNumberOfTriesValue()-i) + " days before showing the password"
             tempNotification.timeZone = NSTimeZone.defaultTimeZone()
             UIApplication.sharedApplication().scheduleLocalNotification(tempNotification)
@@ -61,7 +61,7 @@ class NotificationScheduler: NSObject {
         // Last notification showing the password
         let lastNotification = UILocalNotification()
         lastday = lastday + self.convertSecondsToDays(1)
-        lastNotification.fireDate = NSDate(timeIntervalSinceNow: lastday)
+        lastNotification.fireDate = self.insidePreferedWindow(NSDate(timeIntervalSinceNow: lastday))
         lastNotification.alertBody = "The owner of the phone is gone, unlock it, this is the password: " + configuration.getCodeValue()
         lastNotification.timeZone = NSTimeZone.defaultTimeZone()
         UIApplication.sharedApplication().scheduleLocalNotification(lastNotification)
@@ -69,7 +69,7 @@ class NotificationScheduler: NSObject {
         // One last one in case
         let lastNotification2 = UILocalNotification()
         lastday = lastday + self.convertSecondsToDays(1)
-        lastNotification2.fireDate = NSDate(timeIntervalSinceNow: lastday)
+        lastNotification2.fireDate = self.insidePreferedWindow(NSDate(timeIntervalSinceNow: lastday))
         lastNotification2.alertBody = "The owner of the phone is gone, unlock it, this is the password: " + configuration.getCodeValue() + " last communication"
         lastNotification2.timeZone = NSTimeZone.defaultTimeZone()
         UIApplication.sharedApplication().scheduleLocalNotification(lastNotification2)
@@ -80,5 +80,12 @@ class NotificationScheduler: NSObject {
     {
         var days = (((seconds * 60) * 60) * 24)
         return days
+    }
+    
+    func insidePreferedWindow(date : NSDate) -> NSDate
+    {
+        // TODO: Make sure the timer is on their selected window
+        
+        return date
     }
 }
