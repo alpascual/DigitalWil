@@ -44,6 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 //HUDController.sharedController.hide(afterDelay: 2.0)
             }
         }
+        
+        application.applicationIconBadgeNumber = 0
         return true
     }
 
