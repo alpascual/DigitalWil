@@ -48,7 +48,7 @@ class NotificationScheduler: NSObject {
         var betweenRequests = defaults.objectForKey(configuration.HowLongBetweenRequests) as Int
         var seconds : Double = Double(betweenRequests)
         var days = self.convertSecondsToDays(seconds)
-        notification.fireDate = NSDate(timeIntervalSinceNow: days)
+        notification.fireDate = self.insidePreferedWindow(NSDate(timeIntervalSinceNow: days))
         notification.applicationIconBadgeNumber=notification.applicationIconBadgeNumber+1        
         notification.alertBody = "Confirm you are still alive and well by clicking the notification"
         notification.timeZone = NSTimeZone.defaultTimeZone()

@@ -17,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
         
+        let Device = UIDevice.currentDevice()
+        let iosVersion = NSString(string: Device.systemVersion).doubleValue
+        let iOS8 = iosVersion >= 8
+        let iOS7 = iosVersion >= 7 && iosVersion < 8
+        
+        if iOS8
+        {
+            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+        }
+        else if iOS7
+        {
+            //do iOS 7 stuff, which is pretty much nothing for local notifications.
+        }
+        
         let noti = NotificationScheduler()
         noti.ChangesOnNotification()
         
