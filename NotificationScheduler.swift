@@ -94,13 +94,11 @@ class NotificationScheduler: NSObject {
     
     func insidePreferedWindow(date : NSDate) -> NSDate
     {
+        println("-------Original-----")
         println(date)
         
         //Make sure the timer is on their selected window
-        let calendar = NSCalendar.currentCalendar()
-        var conponents : NSDateComponents = calendar.components(NSCalendarUnit.HourCalendarUnit, fromDate: date)
-        println(conponents)
-        var hour = conponents.hour
+        var hour = self.getHour(date)
         
         let configuration = Configuration()
         var timeOfDay = configuration.getTimeOfTheDayValue()
@@ -117,18 +115,26 @@ class NotificationScheduler: NSObject {
             min = 12
         }
         
+        var newDate : NSDate = date
         while ( hour < min || hour > max)
         {
-            hour = hour + 1
-            if hour > 24
-            {
-                hour = 0
-            }
+            newDate = NSDate(timeInterval: NSTimeInterval(1500), sinceDate: newDate)
+            
+            println("-------Changed-----")
+            println(newDate)
+            hour = self.getHour(newDate)
+            println(hour)
         }
         
-        conponents.hour = hour
-        return calendar.dateFromComponents(conponents)!
-        
-        //return date
+        return newDate
+    }
+    
+    func getHour(date : NSDate) -> Int
+    {
+        //Make sure the timer is on their selected window
+        let calendar = NSCalendar.currentCalendar()
+        var conponents : NSDateComponents = calendar.components(NSCalendarUnit.HourCalendarUnit, fromDate: date)
+        //println(conponents)
+        return conponents.hour
     }
 }
