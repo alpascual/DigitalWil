@@ -70,6 +70,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backGroundImage" destination="aXT-I8-4Vl" id="VJs-5x-YTc"/>
                         <outlet property="setupButton" destination="li7-jt-FL4" id="v84-8x-S0T"/>
                         <segue destination="hIR-aT-Z1I" kind="show" identifier="FirstSegue" id="b1c-3n-AnG"/>
                         <segue destination="Rmg-DR-U1i" kind="show" identifier="SecondSegue" id="24K-Bs-Gkt"/>
@@ -330,8 +331,8 @@
         <image name="warning.png" width="640" height="1007"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lfg-Ik-ymf"/>
-        <segue reference="LmO-ta-MDy"/>
+        <segue reference="24K-Bs-Gkt"/>
         <segue reference="h4v-sS-Jnz"/>
+        <segue reference="b1c-3n-AnG"/>
     </inferredMetricsTieBreakers>
 </document>
