@@ -45,6 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        if application.applicationIconBadgeNumber > 0
+        {
+            HUDController.sharedController.contentView = HUDContentView.TextView(text: "Got it, you still alive and well. Rescheduling for a later date ...")
+            HUDController.sharedController.show()
+            HUDController.sharedController.hide(afterDelay: 2.0)
+        }
+        
         application.applicationIconBadgeNumber = 0
         return true
     }

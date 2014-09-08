@@ -50,6 +50,9 @@ class LegacyViewController: MasterPage {
             // Message: Your device does not have a Touch ID, we can secure this app better by Touch ID
             println("Another kind of authentication")
             HUDController.sharedController.contentView = HUDContentView.TextView(text: "TouchID not found")
+            
+            // Load text for now
+            self.loadText()
         }
         
         //https://github.com/pkluz/PKHUD
@@ -61,6 +64,10 @@ class LegacyViewController: MasterPage {
     {
         let config = Configuration()
         config.setLegacyText(self.textLegacy!.text)
+        
+        HUDController.sharedController.contentView = HUDContentView.TextView(text: "Saved!")
+        HUDController.sharedController.show()
+        HUDController.sharedController.hide(afterDelay: 1.0)
     }
     
     func loadText()
