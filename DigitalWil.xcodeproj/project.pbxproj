@@ -23,6 +23,8 @@
 		20B553CA19701F1F006165BF /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B553BB19701F1F006165BF /* profile@2x.png */; };
 		20B553CB19701F1F006165BF /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B553BC19701F1F006165BF /* star.png */; };
 		20B553CC19701F1F006165BF /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B553BD19701F1F006165BF /* star@2x.png */; };
+		884CC37719CBA74100C113E1 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884CC37519CBA74100C113E1 /* OnboardingContentViewController.swift */; };
+		884CC37819CBA74100C113E1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884CC37619CBA74100C113E1 /* OnboardingViewController.swift */; };
 		88C4CF7B19A8086500C5C726 /* FrostedSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CF7A19A8086500C5C726 /* FrostedSidebar.swift */; };
 		88C4CF7D19A80EFB00C5C726 /* MasterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CF7C19A80EFB00C5C726 /* MasterPage.swift */; };
 		88C4CF7F19A8103500C5C726 /* LegacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CF7E19A8103500C5C726 /* LegacyViewController.swift */; };
@@ -79,6 +81,8 @@
 		20B553BB19701F1F006165BF /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "FrostedSidebar/profile@2x.png"; sourceTree = SOURCE_ROOT; };
 		20B553BC19701F1F006165BF /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = FrostedSidebar/star.png; sourceTree = SOURCE_ROOT; };
 		20B553BD19701F1F006165BF /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "FrostedSidebar/star@2x.png"; sourceTree = SOURCE_ROOT; };
+		884CC37519CBA74100C113E1 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		884CC37619CBA74100C113E1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		88C4CF7A19A8086500C5C726 /* FrostedSidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrostedSidebar.swift; path = FrostedSidebar/FrostedSidebar.swift; sourceTree = SOURCE_ROOT; };
 		88C4CF7C19A80EFB00C5C726 /* MasterPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterPage.swift; sourceTree = SOURCE_ROOT; };
 		88C4CF7E19A8103500C5C726 /* LegacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -144,6 +148,7 @@
 		208E5DF0196DBE6F005653B3 /* FrostedSidebar */ = {
 			isa = PBXGroup;
 			children = (
+				884CC37419CBA74100C113E1 /* OnBoard */,
 				88FBE80119B125A2009F061D /* Icons */,
 				88FBE7ED19B004FC009F061D /* PKHUD */,
 				88C4CF8419ABAFF800C5C726 /* Resources */,
@@ -183,6 +188,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		884CC37419CBA74100C113E1 /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				884CC37519CBA74100C113E1 /* OnboardingContentViewController.swift */,
+				884CC37619CBA74100C113E1 /* OnboardingViewController.swift */,
+			);
+			path = OnBoard;
+			sourceTree = SOURCE_ROOT;
 		};
 		88C4CF8419ABAFF800C5C726 /* Resources */ = {
 			isa = PBXGroup;
@@ -352,6 +366,7 @@
 				88FBE7F819B004FC009F061D /* HUDAssets.swift in Sources */,
 				88FBE7FD19B004FC009F061D /* Window.swift in Sources */,
 				88C4CF8219ABA4D100C5C726 /* ProfileViewController.swift in Sources */,
+				884CC37819CBA74100C113E1 /* OnboardingViewController.swift in Sources */,
 				88C4CF7D19A80EFB00C5C726 /* MasterPage.swift in Sources */,
 				88FBE7DA19AD29E3009F061D /* Configuration.swift in Sources */,
 				88FBE7F719B004FC009F061D /* FrameView.swift in Sources */,
@@ -362,6 +377,7 @@
 				88FBE7DC19AD52DD009F061D /* EditConfigurationViewController.swift in Sources */,
 				2008D69D197021D300B89D6C /* AppDelegate.swift in Sources */,
 				88C4CF7F19A8103500C5C726 /* LegacyViewController.swift in Sources */,
+				884CC37719CBA74100C113E1 /* OnboardingContentViewController.swift in Sources */,
 				88FBE7FE19B004FC009F061D /* WindowRootViewController.swift in Sources */,
 				88FBE7F919B004FC009F061D /* HUDContentView.swift in Sources */,
 			);
