@@ -158,11 +158,17 @@ class Configuration
     func getLegacyText() -> String
     {
         var defaults = NSUserDefaults()
-        var text : String! = defaults.objectForKey(ConfigurationText) as String
-        if text == nil {
-            text = "Add any extra message you want here..."
+        if defaults.objectForKey(ConfigurationText) != nil
+        {
+            var text : String! = defaults.objectForKey(ConfigurationText) as String
+            if text == nil {
+                text = "Add any extra message you want here..."
+            }
+            
+            return text
         }
-        return text
+        
+        return "Nothing yet"
     }
     
     func setLegacyText(text : String)
