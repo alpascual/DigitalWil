@@ -47,9 +47,9 @@ class ProfileViewController: MasterPage, UITableViewDataSource, UITableViewDeleg
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         // Configure the cell...
-        cell!.textLabel!.text = sectionStrings[indexPath.row] as String
-        cell!.textLabel!.font = UIFont(name: "ItalicMT", size: 10.0)
-        cell!.textLabel!.textColor = UIColor.grayColor()
+        cell!.textLabel.text = sectionStrings[indexPath.row] as String
+        cell!.textLabel.font = UIFont(name: "ItalicMT", size: 10.0)
+        cell!.textLabel.textColor = UIColor.grayColor()
         
         cell!.detailTextLabel!.text = configuration.convertValueFor(self.valueStrings[indexPath.row], position: indexPath.row)
         cell!.detailTextLabel!.font = UIFont(name: "ArialMT", size: 20.0)
